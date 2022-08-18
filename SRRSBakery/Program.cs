@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using SRRSBakery.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-string connString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
