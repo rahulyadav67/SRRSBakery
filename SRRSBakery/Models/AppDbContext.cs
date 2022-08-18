@@ -205,6 +205,186 @@ namespace SRRSBakery.Models
                    "data:image/jpeg;base64,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",
                 AllergyInformation = ""
             });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 11,
+                Name = "Jam-filled-pikelets",
+                Price = 100,
+                ShortDescription = "Mini Australian Pancakes",
+                LongDescription =
+                   "These fluffy mini Australian pancakes are made with pockets that can be filled with custard or jam. Pikelets are usually enjoyed with butter and honey or jam as a snack or are served with afternoon tea",
+                CategoryId = 3,
+                ImageUrl = "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190227160336/jam-filled-pikelets.jpg",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190227160336/jam-filled-pikelets.jpg",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 12,
+                Name = "Kaiserschmarrn",
+                Price = 150,
+                ShortDescription = "The Emperor's omellete",
+                LongDescription =
+                   "Kaiserschmarrn literally means “the emperor’s sweet omelette,” and is named for the Kaiser Franz Joseph I of Austria. As the pancake mix cooks, it is turned and cut with a fork, which is why it doesn’t have the shape of traditional types of pancakes. It is usually served with sugar, berries, jam, or apples.",
+                CategoryId = 3,
+                ImageUrl = "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190227160958/Kaiserschmarrn.jpg",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190227160958/Kaiserschmarrn.jpg",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 13,
+                Name = "Boquette",
+                Price = 200,
+                ShortDescription = "Made up of buckwheat",
+                LongDescription =
+                   "Belgium may be more famous for its waffles (which some may argue are essentially the same, though they actually use different batter), don’t miss the delicious boûkéte (or bouquette). Its texture resembles the French crepe, and it is usually made with buckwheat flour and pan-fried in lard. Boûkètes may be embellished with raisins and garnished with a local brown sugar known as cassonade or with sirop de Liège",
+                CategoryId = 3,
+                ImageUrl = "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190227162217/Boquette.jpg",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190227162217/Boquette.jpg",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 14,
+                Name = "Brazilian-Tapioca",
+                Price = 250,
+                ShortDescription = "They are made of Tapioca Flour",
+                LongDescription =
+                   "Tapiocas are also similar to crepes, though the Brazilian pancakes are often slightly thicker. They are made with tapioca flour that is cooked on ungreased girdles. They can be eaten either plain or with a range of sweet and savoury toppings, which include butter and shredded coconut",
+                CategoryId = 3,
+                ImageUrl = "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190227163300/Brazilian-Tapioca.jpg",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190227163300/Brazilian-Tapioca.jpg",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 15,
+                Name = "Cong-you-bing-2",
+                Price = 300,
+                ShortDescription = "Made up of Wheat",
+                LongDescription =
+                   "Bing are savoury Chinese pancakes that are usually made with wheat. The consistency varies across regions from thick and chewy to paper-thin. They are often eaten as a snack, and can be filled with ground meat, or fried with scallions. One of the most popular variations is the cong you bing, or the flaky scallion pancakes. These types of pancakes are often served with soy sauce to dip it in.",
+                CategoryId = 3,
+                ImageUrl = "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190228181951/cong-you-bing-2.jpg",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190228181951/cong-you-bing-2.jpg",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 16,
+                Name = "Arepas",
+                Price = 350,
+                ShortDescription = "Made of corn Flour",
+                LongDescription =
+                   "Traditionally found across Colombia and Venezuela, arepas are a staple of South American cooking much like the tortilla is in Central America. Often said to be a cross between a flatbread and a pancake, they are made with corn flour (or masa) and are often split in half and filled with meat, beans, cheese, and more. While the Colombian arepas are larger and flatter than the thick Venezuelan ones, they are both cooked on a girdle.",
+                CategoryId = 3,
+                ImageUrl = "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190227170318/Arepas.jpg",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190227170318/Arepas.jpg",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 17,
+                Name = "choclate Chip Cookies",
+                Price = 100,
+                ShortDescription = "Fan Favorite",
+                LongDescription =
+                   "Chocolate chip cookies are the perennial classic and longtime fan favorite. They can be soft and chewy or crispy and crunchy depending on how you make them and the ingredients you use. Either way, they’re completely delicious.",
+                CategoryId = 4,
+                ImageUrl = "https://ediblebloglive.wpengine.com/wp-content/uploads/2020/03/Chocolate-Chip-Cookies-min.jpg",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://ediblebloglive.wpengine.com/wp-content/uploads/2020/03/Chocolate-Chip-Cookies-min.jpg",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 18,
+                Name = "Shortbread Cookies",
+                Price = 150,
+                ShortDescription = "Made With Large Amount of butter",
+                LongDescription =
+                   "Shortbread cookies are made with a large amount of butter or shortening, which lends them the name “short.” Due to their low amount of flour and sugar, they have a classic crumbly and tender texture.",
+                CategoryId = 4,
+                ImageUrl = "https://ediblebloglive.wpengine.com/wp-content/uploads/2020/03/Shortbread-Cookies-min.jpg",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://ediblebloglive.wpengine.com/wp-content/uploads/2020/03/Shortbread-Cookies-min.jpg",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 19,
+                Name = "Macaron Cookies",
+                Price = 200,
+                ShortDescription = "Made with almond meal ,egg whites and Powdered suger with cream ganches in the middle",
+                LongDescription =
+                   "Macarons are meringue-based cookies made with almond meal, egg whites, and powdered sugar with a creme ganache in the middle. The cookie shell features a delicate outer crust that houses a chewy meringue texture inside.",
+                CategoryId = 4,
+                ImageUrl = "https://ediblebloglive.wpengine.com/wp-content/uploads/2020/03/Macaron-Cookies-min.jpg",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://ediblebloglive.wpengine.com/wp-content/uploads/2020/03/Macaron-Cookies-min.jpg",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 20,
+                Name = "Sugar Cookies",
+                Price = 250,
+                ShortDescription = "It is very tasty",
+                LongDescription =
+                  "Made with basic ingredients, such as sugar, flour, butter, and vanilla, sugar cookies are easy to make and insanely popular. They’re typically made by rolling out the dough and cutting into shapes before decorating with icing, sprinkles, or colored sugar",
+                CategoryId = 4,
+                ImageUrl = "https://ediblebloglive.wpengine.com/wp-content/uploads/2020/03/Sugar-Cookies-min.jpg",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://ediblebloglive.wpengine.com/wp-content/uploads/2020/03/Sugar-Cookies-min.jpg",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 21,
+                Name = "Oatmeal Raisin Cookies",
+                Price = 300,
+                ShortDescription = "Made with oats",
+                LongDescription =
+                 "Oatmeal raisin is a type of drop cookie. as its name suggests, it’s made with oats, and contains raisins and brown sugar. They can be crispy and crunchy or chewy, depending on the ingredients you use and how long you bake them",
+                CategoryId = 4,
+                ImageUrl = "https://ediblebloglive.wpengine.com/wp-content/uploads/2020/03/Oatmeal-Raisin-Cookies-min.jpg",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://ediblebloglive.wpengine.com/wp-content/uploads/2020/03/Oatmeal-Raisin-Cookies-min.jpg",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 22,
+                Name = "Gingerbread Cookies",
+                Price = 350,
+                ShortDescription = "Ultimate Holiday Cookie",
+                LongDescription =
+                 "Gingerbread cookies are the ultimate holiday cookie. They’re made with spices galore, including cinnamon, ginger, nutmeg, and molasses, and are made by rolling out the dough and cutting into shapes",
+                CategoryId = 4,
+                ImageUrl = "https://ediblebloglive.wpengine.com/wp-content/uploads/2020/03/Gingerbread-Cookies-min.jpg",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://ediblebloglive.wpengine.com/wp-content/uploads/2020/03/Gingerbread-Cookies-min.jpg",
+                AllergyInformation = ""
+            });
 
 
         }
