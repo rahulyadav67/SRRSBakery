@@ -1,7 +1,13 @@
+using SRRSBakery.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
+builder.Services.AddScoped<IitemRepository, ItemRepository>();
 
 var app = builder.Build();
 
