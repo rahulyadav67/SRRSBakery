@@ -35,7 +35,7 @@ namespace SRRSBakery.Models
             modelBuilder.Entity<CakeCategory>().HasData(new CakeCategory { CakeCategoryId = 1, CakeCategoryName = "Flavor Cakes", CakeDescription = "Flavor Cakes" });
             modelBuilder.Entity<CakeCategory>().HasData(new CakeCategory { CakeCategoryId = 2, CakeCategoryName = "BirthDay Cakes", CakeDescription = "BirthDay Cakes" });
             modelBuilder.Entity<CakeCategory>().HasData(new CakeCategory { CakeCategoryId = 3, CakeCategoryName = "HeartShape Cakes", CakeDescription = "HeartShape Cakes" });
-            modelBuilder.Entity<CakeCategory>().HasData(new CakeCategory { CakeCategoryId = 1, CakeCategoryName = "Premium Cakes", CakeDescription = "Premium Cakes" });
+            modelBuilder.Entity<CakeCategory>().HasData(new CakeCategory { CakeCategoryId = 4, CakeCategoryName = "Premium Cakes", CakeDescription = "Premium Cakes" });
 
             //seed Cakes
             modelBuilder.Entity<Cake>().HasData(new Cake
