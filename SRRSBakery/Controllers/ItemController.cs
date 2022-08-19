@@ -7,10 +7,19 @@ namespace SRRSBakery.Controllers
     public class ItemController : Controller
     {
         private readonly ItemRepository _itemRepository;
-        public ItemController(IitemRepository itemRepository)
+        private readonly CategoryRepository _CategoryRepository;
+        public ItemController(IitemRepository itemRepository,ICategoryRepository categoryRepository)
         {
             _itemRepository = (ItemRepository)itemRepository;
+            _CategoryRepository = (CategoryRepository)categoryRepository;
 
+        }
+        public IActionResult Index()
+        {
+            CategoryListViewModel categoryListViewModel = new CategoryListViewModel();
+            var categories = _CategoryRepository.GetCategories;
+            categoryListViewModel.category = categories;
+            return View(categoryListViewModel);
 
         }
         public IActionResult ListChips()

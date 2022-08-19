@@ -1,0 +1,48 @@
+﻿
+
+
+
+
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+  width:30%;
+ 
+  
+
+}
+body{
+    background-color:#f9eae1;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+ 
+    <h1>hwllo</h1>
+    
+@foreach (var category in Model.category)
+{
+    <span>
+        <img src=@category.ImgUrl>
+        <p>@category.CategoryName</p>
+    </span>
+}
+
+
+</body>
+</html>

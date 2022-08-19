@@ -17,6 +17,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IitemRepository, ItemRepository>();
+builder.Services.AddScoped <ICategoryRepository, CategoryRepository>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSession();
 var app = builder.Build();
@@ -39,6 +40,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Item}/{action=ListDonuts}/{id?}");
+    pattern: "{controller=Item}/{action=Index}/{id?}");
 
 app.Run();
