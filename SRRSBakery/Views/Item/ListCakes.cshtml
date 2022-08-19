@@ -1,0 +1,23 @@
+﻿<body backGound style="background-color:#EECFD4">
+
+
+@foreach (var donut in Model.Items)
+{
+    <div class="col-sm-4 col-lg-4 col-md-4" >
+        <div class="thumbnail">
+
+            <h3>
+               
+                
+            </h3>
+            <img style="border-radius:50%"width="40%" src="@donut.ImageThumbnailUrl" alt="">
+            <div class="caption">
+                <h3 class="pull-right">₹@donut.Price.ToString("n")</h3>
+                
+                <p>@donut.Name</p>
+            </div>
+        </div>
+    </div>
+}
+
+</body>

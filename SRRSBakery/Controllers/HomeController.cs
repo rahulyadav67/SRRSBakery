@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SRRSBakery.Models;
+using SRRSBakery.ViewModels;
 using System.Diagnostics;
 
 namespace SRRSBakery.Controllers
@@ -7,16 +8,16 @@ namespace SRRSBakery.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+      //  private readonly CategoryRepository _CategoryRepository;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+           // categoryRepository=_CategoryRepository;
+           // _CategoryRepository = (CategoryRepository)categoryRepository;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+       
 
         public IActionResult Privacy()
         {
