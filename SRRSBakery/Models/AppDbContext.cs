@@ -14,6 +14,9 @@ namespace SRRSBakery.Models
 
         public DbSet<Item> Items { get; set; }
 
+        public DbSet<Cake> Cakes { get; set; }
+        public DbSet<CakeCategory> CakeCategories { get; set; }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -28,6 +31,388 @@ namespace SRRSBakery.Models
             modelBuilder.Entity<Category>().HasData(new Category { CategoryId = 7, CategoryName = "Donuts", Description = "Donuts" });
             modelBuilder.Entity<Category>().HasData(new Category { CategoryId = 8, CategoryName = "Chips", Description = "Chips" });
 
+        
+            modelBuilder.Entity<CakeCategory>().HasData(new CakeCategory { CakeCategoryId = 1, CakeCategoryName = "Flavor Cakes", CakeDescription = "Flavor Cakes" });
+            modelBuilder.Entity<CakeCategory>().HasData(new CakeCategory { CakeCategoryId = 2, CakeCategoryName = "BirthDay Cakes", CakeDescription = "BirthDay Cakes" });
+            modelBuilder.Entity<CakeCategory>().HasData(new CakeCategory { CakeCategoryId = 3, CakeCategoryName = "HeartShape Cakes", CakeDescription = "HeartShape Cakes" });
+            modelBuilder.Entity<CakeCategory>().HasData(new CakeCategory { CakeCategoryId = 1, CakeCategoryName = "Premium Cakes", CakeDescription = "Premium Cakes" });
+
+            //seed Cakes
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+               CakeId = 1,
+               Name = "Round Chocolate Truffle Cake",
+               Price = 549,
+               ShortDescription = "The devilishly delicious taste of this cake with Cocoa fix leaves you 'High' on chocolate in every good sense.",
+               LongDescription = "The heavenly taste of this Choco Truffle Cake will even leave the hardest-to-please chocolate addicts tranquil in every sense. Prepared with three layers of relishing chocolate cream filled in between the soft stacks of chocolate cake, and adorned with beautiful chocolate icing and rich glaze chocolate coating, this one is just irresistible.",
+               CategoryId = 1,
+               CakeCategoryId = 1,
+               ImageUrl = "https://media.bakingo.com/sq-choco-truffle-cake0005choc-AA.jpg?tr=w-320,h-320,q-70",
+               ImageUrlLarge = "https://media.bakingo.com/sq-choco-truffle-cake0005choc-AA.jpg",
+               ImageUrlLargee = "https://media.bakingo.com/sq-choco-truffle-cake0005choc-AB.jpg",
+               ImageUrlLargeee = "https://media.bakingo.com/sq-choco-truffle-cake0005choc-AD_0.jpg",
+               InStock = true,
+               Bestseller = true,
+
+             });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 2,
+                Name = "Heavenly Red Velvet Chocolate Cake",
+                Price = 649,
+                ShortDescription = "The two most relished flavours in a single cake--chocolate and red velvet to take your pleasures to next level.",
+                LongDescription = "The two celebratory flavours in a single cake -red velvet cake layers entirely covered in dark chocolate cream roses sprinkled with red velvet crumbs. A slice of the cake won't be enough to celebrate the fusion of flavours; you would need a whole cake.",
+                CategoryId = 1,
+                CakeCategoryId = 1,
+                ImageUrl = "https://media.bakingo.com/sq-red-velvet-chocolate-cake-cake1637redv-A_0.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-red-velvet-chocolate-cake-cake1637redv-A_0.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-red-velvet-chocolate-cake-cake1637redv-B_0.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-red-velvet-chocolate-cake-cake1637redv-D_0.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 3,
+                Name = "Buttery Delight Butterscotch Cake",
+                Price = 649,
+                ShortDescription = "Butterscotch is savoured by all age groups. Bakingo presents delicious butterscotch delight is crowned with...",
+                LongDescription = "Butterscotch is savoured by all age groups. Bakingo presents delicious butterscotch delight is crowned with buttercream ribbon curls toped with white chocolate. You can send butterscotch cakes online to your dear ones and bring a broad smile on their face.",
+                CategoryId = 1,
+                CakeCategoryId = 1,
+                ImageUrl = "https://media.bakingo.com/sq-round-buttery-delight-butterscotch-cake-cake2281butt-A_1.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-round-buttery-delight-butterscotch-cake-cake2281butt-A_1.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-round-buttery-delight-butterscotch-cake-cake2281butt-B_1.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-round-buttery-delight-butterscotch-cake-cake2281butt-D_1.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 4,
+                Name = "Round Pink Roses Vanilla Cake",
+                Price = 649,
+                ShortDescription = "So, Valentine's Day is approaching and you must be looking for something to swoon your beloved. Here's this...",
+                LongDescription = "So, Valentine's Day is approaching and you must be looking for something to swoon your beloved. Here's this fluffy and moist vanilla cake topped with pink roses. You'll love this Vanilla Rose Cake for it's refreshing and subtle sweet flavors. Order now!",
+                CategoryId = 1,
+                CakeCategoryId = 1,
+                ImageUrl = "https://media.bakingo.com/sq-round-pink-roses-vanilla-cake-rosecake2561vani-A_0.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-round-pink-roses-vanilla-cake-rosecake2561vani-A_0.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-round-pink-roses-vanilla-cake-rosecake2561vani-B_0.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-round-pink-roses-vanilla-cake-rosecake2561vani-D_0.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 5,
+                Name = "Chocolate Vanilla Duet Cake",
+                Price = 559,
+                ShortDescription = "The best of both worlds reimagined in a cake? duet of chocolate and vanilla with chocolate garnishes on the top and red cherry. The cake will surely leave you with a sweet lingering taste.",
+                LongDescription = "Your dessert of the day exquisite choco vanilla cake. Yes, you can have both at the same time. You won't know until you have a bite of it. The picture says it all! This choco vanilla cake can be a snack while whipping over a hot coffee. An ideal choice for any celebration.",
+                CategoryId = 1,
+                CakeCategoryId = 1,
+                ImageUrl = "https://media.bakingo.com/sq-choco-vanilla-cake-2-cake893chva-A_1.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-choco-vanilla-cake-2-cake893chva-A_1.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-snicker-chocolate-cake0028choc-AB.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-choco-vanilla-cake-2-cake893chva-C_1.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 6,
+                Name = "Topical Mango delight",
+                Price = 559,
+                ShortDescription = "Taste the terrific tropic mango cake with a zesty blend of mango and mushy rich cream. Made of three rich...",
+                LongDescription = "Taste the terrific tropic mango cake with a zesty blend of mango and mushy rich cream. Made of three rich cream layers and mango fillings, this cake is a tantalizing treat. The crest that is frosted with white chocolate shavings offers mango glaze which is made from fresh mango pulp. So, next time when life gives you lemons, throw it back and say I said l wanted mango!",
+                CategoryId = 1,
+                CakeCategoryId = 1,
+                ImageUrl = "https://media.bakingo.com/sq-mango-cake0020frui-A_2.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-mango-cake0020frui-A_2.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-mango-cake0020frui-B_2.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-mango-cake0020frui-E.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 7,
+                Name = "Assorted Fruit and Almond Cake",
+                Price = 699,
+                ShortDescription = "With farm-fresh fruits inside the cream layers and topped over a vanilla cake with almond shavings, your tastebuds will do the sweet-tango dance.",
+                LongDescription = "Freshly baked Vanilla cake, Whipped cream and bountiful tropical fruits come together to create a treat that is even tastier than it looks. This combination of whipped cream and fresh fruit is a perfect start for any celebration and an enticing end to any meal.",
+                CategoryId = 1,
+                CakeCategoryId = 1,
+                ImageUrl = "https://media.bakingo.com/sq-fresh-fruit-cake0014frui-AA.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-fresh-fruit-cake0014frui-AA.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-fresh-fruit-cake0014frui-AB.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-fresh-fruit-cake0014frui-AD.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 8,
+                Name = "Glazing Red Velvet Cake",
+                Price = 749,
+                ShortDescription = "Celebrate your birthday and the birthday of your loved ones with this aesthetically pleasing red velvet cake....",
+                LongDescription = "Celebrate your birthday and the birthday of your loved ones with this aesthetically pleasing red velvet cake. It is half red and half orange in color and the taste is just a chef's kiss. The sheer beauty and taste of this lovely cake is sure to impress just about anyone.",
+                CategoryId = 1,
+                CakeCategoryId = 2,
+                ImageUrl = "https://media.bakingo.com/sq-dripping-with-deliciousness-red-velvet-cake-cake2297redv-A_0.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-dripping-with-deliciousness-red-velvet-cake-cake2297redv-A_0.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-dripping-with-deliciousness-red-velvet-cake-cake2297redv-B_0.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-dripping-with-deliciousness-red-velvet-cake-cake2297redv-F_0.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 9,
+                Name = "Birthday Chocolate Pinata Cake",
+                Price = 1399,
+                ShortDescription = "Grab the most special birthday cake for celebrations of your loved one’s birthday....",
+                LongDescription = "Grab the most special birthday cake for celebrations of your loved one’s birthday this year with a gorgeous chocolate pinata cake! Crack this fun filled delight to get a bite off of a dense chocolate cake topped with colourful gems, two kitkat and two Ferrero Rochers. This year crack the cake open instead of cutting it! Note: Hammer will be given with the cake.",
+                CategoryId = 1,
+                CakeCategoryId = 2,
+                ImageUrl = "https://media.bakingo.com/sq-birthday-chocolate-overload-pinata-cake-750gm-pina2163choc-A_0.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-birthday-chocolate-overload-pinata-cake-750gm-pina2163choc-A_0.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-birthday-chocolate-overload-pinata-cake-750gm-pina2163choc-B_0.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-birthday-chocolate-overload-pinata-cake-750gm-pina2163choc-D_0.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 10,
+                Name = "Happy Birthday Vanilla Cake",
+                Price = 699,
+                ShortDescription = "Celebrate your birthday and the birthday of your loved ones with this aesthetically pleasing cake....",
+                LongDescription = "Is yours or your loved ones around the corner? Winter birthday are always fun and exciting. How about this delicious snowman snowy cake for their birthday? Baked with love and topped with an edible snowman, this birthday is sure to be a cozy one for you and your loved ones.",
+                CategoryId = 1,
+                CakeCategoryId = 2,
+                ImageUrl = "https://media.bakingo.com/sq-round-snowman-happy-birthday-vanilla-cake-cake2407vani-A_0.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-round-snowman-happy-birthday-vanilla-cake-cake2407vani-A_0.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-round-snowman-happy-birthday-vanilla-cake-cake2407vani-B_0.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-round-snowman-happy-birthday-vanilla-cake-cake2407vani-C_0.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 11,
+                Name = "Birthday Black Forest Pinata Cake",
+                Price = 1449,
+                ShortDescription = "End the wait, break the ball with this black forest pinata cake, the true taste of surprise and luxury....",
+                LongDescription = "End the wait, break the ball with this black forest pinata cake, the true taste of surprise and luxury. It is a ball-shaped cake with a ball made of chocolate and a hammer that helps you break it loose. Next, what you see inside is a delicious black forest cake with icing, frosting and sponge, all chocolaty and mouth savouring. Make it your choice for all coming occasions.Note: Hammer will be given with the cake.",
+                CategoryId = 1,
+                CakeCategoryId = 2,
+                ImageUrl = "https://media.bakingo.com/sq-birthday-black-forest-pinata-cake-800gm-pina2042blac-A_0.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-birthday-black-forest-pinata-cake-800gm-pina2042blac-A_0.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-birthday-black-forest-pinata-cake-800gm-pina2042blac-C_0.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-birthday-black-forest-pinata-cake-800gm-pina2042blac-D_0.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 12,
+                Name = "Pineapple Gems Pinata Cake",
+                Price = 1449,
+                ShortDescription = "Both a joy to your sight as well as your taste buds, this pineapple flavoured scrumptious cake....",
+                LongDescription = "Both a joy to your sight as well as your taste buds, this pineapple flavoured scrumptious cake is a delight that you must indulge in every celebration! Frosted with pastel shades of buttercream, drizzling white chocolate ganache, and dollops of pink whipped cream on top, this delicious cake is loaded with copious amounts of gems in the center that spills out when you cut a slice!",
+                CategoryId = 1,
+                CakeCategoryId = 2,
+                ImageUrl = "https://media.bakingo.com/sq-pineapple-gems-pinata-cake-pina2149pine-A_0.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-pineapple-gems-pinata-cake-pina2149pine-A_0.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-pineapple-gems-pinata-cake-pina2149pine-B_0.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-pineapple-gems-pinata-cake-pina2149pine-D_0.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 13,
+                Name = "Heart Black Forest Vanilla Cake",
+                Price = 649,
+                ShortDescription = "The chocolate and vanilla blend beautifully in texture, yet pleasantly contrast in color and flavor.",
+                LongDescription = "The chocolate and vanilla blend beautifully in texture, yet pleasantly contrast in color and flavor. Watch your special ones relish with excitement when they experience the unforgettable taste of this rich and creamy three-layered cake. Beautifully finished into a heart-shape with chocolate shavings and cherries on one side and hand-crafted Red Rose on the other, is indeed, a Torrid Love Affair.",
+                CategoryId = 1,
+                CakeCategoryId = 3,
+                ImageUrl = "https://media.bakingo.com/squ-heart-shaped-black-forest-vanilla-cake0039hbfv-A.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/squ-heart-shaped-black-forest-vanilla-cake0039hbfv-A.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/squ-heart-shaped-black-forest-vanilla-cake0039hbfv-B.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/squ-heart-shaped-black-forest-vanilla-cake0039hbfv-C.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 14,
+                Name = "Pink Hearty Rose Strawberry Cake",
+                Price = 749,
+                ShortDescription = "Beautifully in texture, yet pleasantly contrast in color and flavor.",
+                LongDescription = "Convey love and affection on your better half this Valentine’s Day with a lip-smacking and enticing pink hearty rose strawberry cake. This enticing pink hearty cake is decorated with red hearts on top and rose swirls on the sides. Place your order now and customise the taste, design, sizes, and more!",
+                CategoryId = 1,
+                CakeCategoryId = 3,
+                ImageUrl = "https://media.bakingo.com/sq-pink-hearty-rose-strawberry-cake-cake2536stra-A_1.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-pink-hearty-rose-strawberry-cake-cake2536stra-A_1.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-pink-hearty-rose-strawberry-cake-cake2536stra-B_1.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-pink-hearty-rose-strawberry-cake-cake2536stra-C_1.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 15,
+                Name = "Vanilla Heart Cake",
+                Price = 749,
+                ShortDescription = "This mouthwatering and lip-smacking cake comes with all the bells and whistles for love.....",
+                LongDescription = "This mouthwatering and lip-smacking cake comes with all the bells and whistles for love. It has a full heart-shape that maintains the heart theme throughout. The heart's left side is designed with heart-shaped flowers and the other with two golden earrings with pearls.",
+                CategoryId = 1,
+                CakeCategoryId = 3,
+                ImageUrl = "https://media.bakingo.com/sq-vanilla-heart-cake-cake1708vani-A_0.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-vanilla-heart-cake-cake1708vani-A_0.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-vanilla-heart-cake-cake1708vani-B_0.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-vanilla-heart-cake-cake1708vani-C_0.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 16,
+                Name = "Pineapple Heart Shaped Pinata Cake",
+                Price = 1049,
+                ShortDescription = "Love is flavoursome, just like this cake a diamond-heart pinata cake in pineapple flavour.....",
+                LongDescription = "Love is flavoursome, just like this cake a diamond-heart pinata cake in pineapple flavour. Inside the pinata, there is a heart-shaped sponge cake layered with whipped cream and drizzled with pineapple syrup. Break into sweet love and happiness on any celebration of yours. Note: Hammer will be given with the cake.",
+                CategoryId = 1,
+                CakeCategoryId = 3,
+                ImageUrl = "https://media.bakingo.com/sq-pineapple-pinata-cake-450gm-pina2265pine-A_0.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-pineapple-pinata-cake-450gm-pina2265pine-A_0.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-pineapple-pinata-cake-450gm-pina2265pine-C_0.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-pineapple-pinata-cake-450gm-pina2265pine-D_0.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 17,
+                Name = "Snicker Fuse Chocolate Cake",
+                Price = 649,
+                ShortDescription = "Snickers snickers all around! Your super healthy dessert topped with molten chocolate and chocolate chunks, you can't stop drooling over this cake.",
+                LongDescription = "Award yourself with this rich chocolate cake wonderfully crammed with Cadbury Fuse and white chocolate chunks and draped lusciously with molten chocolate. This perfect work of art hides in every bite, the scrumptious flavours of heavily whipped chocolate cream and nutty bits of chocolate that is a little nutty and a lot of tasty!",
+                CategoryId = 1,
+                CakeCategoryId = 4,
+                ImageUrl = "https://media.bakingo.com/sq-snicker-chocolate-cake0028choc-AA.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-snicker-chocolate-cake0028choc-AA.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-snicker-chocolate-cake0028choc-AB.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-snicker-chocolate-cake0028choc-AD.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 18,
+                Name = "Double Trouble Fondant Cake",
+                Price = 4699,
+                ShortDescription = "Love is sweet and creamy, just like this cake! Spoil the love of your life with a two-tier decadent...",
+                LongDescription = "Love is sweet and creamy, just like this cake! Spoil the love of your life with a two-tier decadent. Baked with lots of love, enrobed in colours of affection, and adorned with romantic hearts, the cake will infuse the moment with amorous feelings like the way you wanted.",
+                CategoryId = 1,
+                CakeCategoryId = 4,
+                ImageUrl = "https://media.bakingo.com/sq-fondant-two-tier-cake-them1395flav-A_0.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-fondant-two-tier-cake-them1395flav-A_0.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-fondant-two-tier-cake-them1395flav-A_0.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-fondant-two-tier-cake-them1395flav-A_0.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 19,
+                Name = "Round Golden Jubilee Anniversary Fondant Cake",
+                Price = 5999,
+                ShortDescription = "Celebrate the milestone of completing 50 years of togetherness deliciously....",
+                LongDescription = "Celebrate the milestone of completing 50 years of togetherness deliciously. Send your blessings and wishes to those who matter the most to you with this ambrosial anniversary cake. It is a perfect cake if you are throwing a grand party. Order this cake and make your celebration tastier.",
+                CategoryId = 1,
+                CakeCategoryId = 4,
+                ImageUrl = "https://media.bakingo.com/sq-round-golden-jubilee-anniversary-cake-them1386flav-A_0.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-round-golden-jubilee-anniversary-cake-them1386flav-A_0.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-round-golden-jubilee-anniversary-cake-them1386flav-A_0.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-round-golden-jubilee-anniversary-cake-them1386flav-A_0.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 20,
+                Name = "3 Tier Party Celebration Cake",
+                Price = 4599,
+                ShortDescription = "Special Cake",
+                LongDescription = "This 4 kg three-tier Cake is especially crafted with ecstasy and fervor, for you to savor its captivating taste, on all celebrations of happy times and memories. This winning cake is sure to tickle your taste buds. From how it looks to how it tastes, you indubitably are going to be utterly engaged with the very first bite. Serving: 28-30",
+                CategoryId = 1,
+                CakeCategoryId = 4,
+                ImageUrl = "https://media.bakingo.com/sq3-tier-party-cake-for-any-celebration-A_0.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq3-tier-party-cake-for-any-celebration-A_0.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq3-tier-party-cake-for-any-celebration-A_0.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq3-tier-party-cake-for-any-celebration-A_0.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 21,
+                Name = "4 Tier Anniversary Party Cake",
+                Price = 10599,
+                ShortDescription = "SRRS Special delicious Cake...",
+                LongDescription = "Introduce a slice of heaven to your celebratory occasion and be the most amazing host of the party with this lovely 4 tiered party cake. Add spark to this vegan eggless delight with a customisable choice of the base cake flavour. Add a little slice of heaven to your party with this thick fondant-covered creamy and delicious party cake!",
+                CategoryId = 1,
+                CakeCategoryId = 4,
+                ImageUrl = "https://media.bakingo.com/sq-4-tier-anniversary-party-cake-part1802flav_0.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-4-tier-anniversary-party-cake-part1802flav_0.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-4-tier-anniversary-party-cake-part1802flav_0.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-4-tier-anniversary-party-cake-part1802flav_0.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            modelBuilder.Entity<Cake>().HasData(new Cake
+            {
+                CakeId = 22,
+                Name = "3 Tier Royal Party Cake",
+                Price = 5899,
+                ShortDescription = "SRRS Royal delicious Cake...",
+                LongDescription = "It's party time so rejoice and order this stunning fondant party cake getting it made any of your favourite flavours. This royal black and gold fondant three-tier cake is sure to make it to the highlight of the special celebratory occasion, making it a memorable one.",
+                CategoryId = 1,
+                CakeCategoryId = 4,
+                ImageUrl = "https://media.bakingo.com/sq-3-tier-royal-party-cake-part1796flav_0.jpg?tr=w-320,h-320,q-70",
+                ImageUrlLarge = "https://media.bakingo.com/sq-3-tier-royal-party-cake-part1796flav_0.jpg",
+                ImageUrlLargee = "https://media.bakingo.com/sq-3-tier-royal-party-cake-part1796flav_0.jpg",
+                ImageUrlLargeee = "https://media.bakingo.com/sq-3-tier-royal-party-cake-part1796flav_0.jpg",
+                InStock = true,
+                Bestseller = true,
+            
+            });
+            
 
             modelBuilder.Entity<Item>().HasData(new Item
             {
@@ -383,6 +768,91 @@ namespace SRRSBakery.Models
                 InStock = true,
                 Bestsell = true,
                 ImageThumbnailUrl = "https://ediblebloglive.wpengine.com/wp-content/uploads/2020/03/Gingerbread-Cookies-min.jpg",
+                AllergyInformation = ""
+            });
+            //seed Bread
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 23,
+                Name = "Milk Bread",
+                Price = 50,
+                ShortDescription = "Special Bread",
+                LongDescription = "Milk Bread, also known as special bread among everyone is our signature baked bread with a little sweetness.",
+                CategoryId = 2,
+                ImageUrl = "https://cdn.shopify.com/s/files/1/0617/4533/2395/products/BREAD-1.jpg?v=1650475358&width=360",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://cdn.shopify.com/s/files/1/0617/4533/2395/products/BREAD-2.jpg?v=1650475476&width=600",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 24,
+                Name = "Plain Bread",
+                Price = 40,
+                ShortDescription = "Fresh Bread",
+                LongDescription = "It is a traditional style of loaf made chiefly in Scotland and Ireland.It has a dark, well-fired crust on the top and bottom of the bread.",
+                CategoryId = 2,
+                ImageUrl = "https://cdn.shopify.com/s/files/1/0617/4533/2395/products/BREAD-2.jpg?v=1650475476",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://cdn.shopify.com/s/files/1/0617/4533/2395/products/BREAD-2.jpg?v=1650475476&width=600",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 25,
+                Name = "Wheat Bread",
+                Price = 50,
+                ShortDescription = "Whole wheat bread",
+                LongDescription = "wholemeal bread is a type of bread made using flour that is partly or entirely milled from whole or almost-whole wheat grains, see whole-wheat flour and whole grain.",
+                CategoryId = 2,
+                ImageUrl = "https://cdn.shopify.com/s/files/1/0617/4533/2395/products/BREAD-4.jpg?v=1650475492",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://cdn.shopify.com/s/files/1/0617/4533/2395/products/BREAD-4.jpg?v=1650475492",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 26,
+                Name = "SRRS Special Bread",
+                Price = 100,
+                ShortDescription = "Special Milk Bread",
+                LongDescription = "It is a type of bread made using flour that is partly or entirely milled from whole or almost-whole wheat grains, see whole-wheat flour and whole grain.",
+                CategoryId = 2,
+                ImageUrl = "https://cdn.shopify.com/s/files/1/0617/4533/2395/products/BREAD-5.jpg?v=1650475544",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://cdn.shopify.com/s/files/1/0617/4533/2395/products/BREAD-5.jpg?v=1650475544&width=600",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 27,
+                Name = "Triangle Sandwich Bread",
+                Price = 150,
+                ShortDescription = "Speacial Sandwich Bread",
+                LongDescription = "It is a type of bread made using flour that is partly or entirely milled from whole or almost-whole wheat grains, see whole-wheat flour and whole grain.",
+                CategoryId = 2,
+                ImageUrl = "https://cdn.shopify.com/s/files/1/0617/4533/2395/products/BREAD-7.jpg?v=1650475583&width=360",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://cdn.shopify.com/s/files/1/0617/4533/2395/products/BREAD-7.jpg?v=1650475583&width=600",
+                AllergyInformation = ""
+            });
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                ItemId = 28,
+                Name = "Rasin Bun - Special Bun",
+                Price = 40,
+                ShortDescription = "Speacial Bun",
+                LongDescription = "It is a Special,Fresh Bun,sweet made from a dough of flour, milk, yeast and small amounts of sugar and/or butter. Sweet bun dough is distinguished from bread dough by being enriched with sugar, butter and sometimes egg. Common sweet varieties contain small fruit or nuts, topped with icing or caramel, and filled with jam or cream.",
+                CategoryId = 2,
+                ImageUrl = "https://cdn.shopify.com/s/files/1/0617/4533/2395/products/BUN-2.jpg?v=1650624615&width=360",
+                InStock = true,
+                Bestsell = true,
+                ImageThumbnailUrl = "https://cdn.shopify.com/s/files/1/0617/4533/2395/products/BUN-2.jpg?v=1650624615&width=600",
                 AllergyInformation = ""
             });
 
