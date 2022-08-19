@@ -739,8 +739,8 @@ namespace SRRSBakery.Migrations
                         new
                         {
                             CategoryId = 6,
-                            CategoryName = "Desserts",
-                            Description = "Desserts"
+                            CategoryName = "Pizza",
+                            Description = "Pizza"
                         },
                         new
                         {
@@ -1120,6 +1120,566 @@ namespace SRRSBakery.Migrations
                             ItemId = 23,
                             AllergyInformation = "",
                             Bestsell = true,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcStNRVh_1BX98oVqeynwIJTjemhBgXZsufdEi9liD45goyI1IP56J_t-bDT9m4S3TgEZ5ADTUsZ3ck1OuQZWir5AlmMfsc67w&usqp=CAE",
+                            ImageUrl = "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcStNRVh_1BX98oVqeynwIJTjemhBgXZsufdEi9liD45goyI1IP56J_t-bDT9m4S3TgEZ5ADTUsZ3ck1OuQZWir5AlmMfsc67w&usqp=CAE",
+                            InStock = true,
+                            LongDescription = "This cup cake is the ultimate chocolaty heaven for the people who are M.O.C(Mad Over Chocolate).",
+                            Name = "Chocolate Glaze Cupcake",
+                            Price = 50m,
+                            ShortDescription = "This cup cake is the ultimate chocolaty heaven for the people who are M.O.C(Mad Over Chocolate)."
+                        },
+                        new
+                        {
+                            ItemId = 24,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://cdn.dotpe.in/longtail/item_thumbnails/7700711/F1cmZEzB.webp",
+                            ImageUrl = "https://cdn.dotpe.in/longtail/item_thumbnails/7700711/F1cmZEzB.webp",
+                            InStock = true,
+                            LongDescription = "If you wish for the taste of pure chocolaty delicacy, this cake could be an idea deal for you. Coming with chocolate base and swirls of chocolate cream and sprinkled chocolate chips, this cake makes you chocolate dream comes true",
+                            Name = "Choco Chip Cupcake",
+                            Price = 30m,
+                            ShortDescription = "This cup cake is the ultimate chocolaty heaven for the people who are M.O.C ( Mad Over Chocolate)."
+                        },
+                        new
+                        {
+                            ItemId = 25,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://cdn.dotpe.in/longtail/store-items/7700711/NpGi6441.jpeg",
+                            ImageUrl = "https://cdn.dotpe.in/longtail/store-items/7700711/NpGi6441.jpeg",
+                            InStock = true,
+                            LongDescription = "Coming with chocolate cup cake base, whipped vanilla cream, chocolate sauce and the sprinkles of edible sugar candies, this set of 6 cup cake can easily hold a permanent space in anyone's heart.",
+                            Name = "Choco Vanilla Cupcake",
+                            Price = 50m,
+                            ShortDescription = "This cup cake is the ultimate chocolaty heaven for the people who are M.O.C(Mad Over Chocolate)."
+                        },
+                        new
+                        {
+                            ItemId = 26,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://cdn.dotpe.in/longtail/item_thumbnails/7700711/V4c4CuHE.webp",
+                            ImageUrl = "https://cdn.dotpe.in/longtail/item_thumbnails/7700711/V4c4CuHE.webp",
+                            InStock = true,
+                            LongDescription = "Coming with chocolate cup cake base, whipped vanilla cream, chocolate sauce and the sprinkles of edible sugar candies, this set of 6 cup cake can easily hold a permanent space in anyone's heart.",
+                            Name = "Choco Coffee Cupcake",
+                            Price = 150m,
+                            ShortDescription = "Wake up fresh and experience the coffee rush in your veins as you take a bite of these cupcakes."
+                        },
+                        new
+                        {
+                            ItemId = 27,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://cdn.dotpe.in/longtail/store-items/7700711/B2fmWTdg.jpeg",
+                            ImageUrl = "https://cdn.dotpe.in/longtail/store-items/7700711/B2fmWTdg.jpeg",
+                            InStock = true,
+                            LongDescription = "This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.",
+                            Name = "Choco Swirl Frosting CupCakes",
+                            Price = 60m,
+                            ShortDescription = "Wake up fresh and experience the choco rush in your veins as you take a bite of these cupcakes."
+                        },
+                        new
+                        {
+                            ItemId = 28,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRNSKt0-JcNRZIGPuLJ2bFTikGfo-ahpzh8262Xii7qIVY6T57Q8DiZv17_j2nJYEh8m49oVonJ4RD6DeCORKikQULRaxR0m7PV7Pu8-OVYx2mTZNP2bCMkJg&usqp=CAE",
+                            ImageUrl = "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRNSKt0-JcNRZIGPuLJ2bFTikGfo-ahpzh8262Xii7qIVY6T57Q8DiZv17_j2nJYEh8m49oVonJ4RD6DeCORKikQULRaxR0m7PV7Pu8-OVYx2mTZNP2bCMkJg&usqp=CAE",
+                            InStock = true,
+                            LongDescription = "Strawberries are one of my all-time favorite fruits, and I love strawberry flavors in a moist and fluffy cake more than anything else. Like my strawberry pound cake, I can’t think of a better Spring and Summer time dessert that features one of the best fruits known to man than these Strawberry Cupcakes with Strawberry Buttercream.",
+                            Name = "Treat Strawberry Cupcake",
+                            Price = 30m,
+                            ShortDescription = "Your old fashioned belgian Strawberry cupcakes. Totally mouth melting and droolworthy. "
+                        },
+                        new
+                        {
+                            ItemId = 29,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://greedyeats.com/wp-content/uploads/2019/07/Best-strawberry-cupcake-recipe-with-strawberry-frosting.jpg",
+                            ImageUrl = "https://greedyeats.com/wp-content/uploads/2019/07/Best-strawberry-cupcake-recipe-with-strawberry-frosting.jpg",
+                            InStock = true,
+                            LongDescription = "Strawberries are one of my all-time favorite fruits, and I love strawberry flavors in a moist and fluffy cake more than anything else. Like my strawberry pound cake, I can’t think of a better Spring and Summer time dessert that features one of the best fruits known to man than these Strawberry Cupcakes with Strawberry Buttercream.",
+                            Name = "Fresh Strawberry Cupcake",
+                            Price = 50m,
+                            ShortDescription = "Your old fashioned belgian Strawberry cupcakes. Totally mouth melting and droolworthy. "
+                        },
+                        new
+                        {
+                            ItemId = 30,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbjXOellK20PeVXGdNuOYgYpQ4cKSsZjIdmA&usqp=CAU",
+                            ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbjXOellK20PeVXGdNuOYgYpQ4cKSsZjIdmA&usqp=CAU",
+                            InStock = true,
+                            LongDescription = "Bursting with cups of real and fresh strawberries for the best strawberry flavor! These aren't sad vanilla cupcakes with bits of baked strawberries. And we don't need any strawberry essence.",
+                            Name = "Double Creme Strawberry Cupcake",
+                            Price = 120m,
+                            ShortDescription = "Your old fashioned belgian Strawberry cupcakes. Totally mouth melting and droolworthy. "
+                        },
+                        new
+                        {
+                            ItemId = 31,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO76IJauKeSXJ9aJMlJMQXzUmAxPXvZszw7A&usqp=CAU",
+                            ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO76IJauKeSXJ9aJMlJMQXzUmAxPXvZszw7A&usqp=CAU",
+                            InStock = true,
+                            LongDescription = "Bursting with cups of real and fresh strawberries for the best strawberry flavor! These aren't sad vanilla cupcakes with bits of baked strawberries. And we don't need any strawberry essence.",
+                            Name = "Strawberry Chocolate Cupcakes",
+                            Price = 40m,
+                            ShortDescription = "Your old fashioned belgian Strawberry cupcakes. Totally mouth melting and droolworthy. "
+                        },
+                        new
+                        {
+                            ItemId = 32,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFeoGUdWbFPdMOQtwqKBvUX3OI19Zkng5GEA&usqp=CAU",
+                            ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFeoGUdWbFPdMOQtwqKBvUX3OI19Zkng5GEA&usqp=CAU",
+                            InStock = true,
+                            LongDescription = "Strawberries are one of my all-time favorite fruits, and I love strawberry flavors in a moist and fluffy cake more than anything else. Like my strawberry pound cake, I can’t think of a better Spring and Summer time dessert that features one of the best fruits known to man than these Strawberry Cupcakes with Strawberry Buttercream.",
+                            Name = "Strawberry Lemonade Cupcakes",
+                            Price = 55m,
+                            ShortDescription = "Your old fashioned belgian Strawberry cupcakes. Totally mouth melting and droolworthy."
+                        },
+                        new
+                        {
+                            ItemId = 33,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://sallysbakingaddiction.com/wp-content/uploads/2012/09/apple-spice-cupcakes-salted-caramel-frosting.jpg",
+                            ImageUrl = "https://sallysbakingaddiction.com/wp-content/uploads/2012/09/apple-spice-cupcakes-salted-caramel-frosting.jpg",
+                            InStock = true,
+                            LongDescription = "One bite is all it will take to convince even the most die-hard summer spirit that the flavors of fall reign supreme! They’re soft and cakey, remind me of apple pie, and taste extra special with the caramel frosting on top.",
+                            Name = "Apple Spice Cupcakes",
+                            Price = 58m,
+                            ShortDescription = "They’re the indisputable champion if you’re looking for a festive and fun fall cupcake!"
+                        },
+                        new
+                        {
+                            ItemId = 34,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://www.lifeloveandsugar.com/wp-content/uploads/2017/09/Apple-Snickerdoodle-Cupcakes5.jpg",
+                            ImageUrl = "https://www.lifeloveandsugar.com/wp-content/uploads/2017/09/Apple-Snickerdoodle-Cupcakes5.jpg",
+                            InStock = true,
+                            LongDescription = "Amazing thing (although admittedly not as cool 😉 ) are these cupcakes. I’m not craving sweets at this point, but these cupcakes are ones that I wanted to keep all to myself. It’s fall in a cupcake and I’m loving them!",
+                            Name = "Apple Snickerdoodle Cupcake",
+                            Price = 40m,
+                            ShortDescription = "Cupcakes are topped with more apple flavor in the frosting"
+                        },
+                        new
+                        {
+                            ItemId = 35,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "http://www.blueberryvegan.com/wp-content/uploads/2017/10/Vegan-Apple-Cinnamon-Cupcakes.jpg",
+                            ImageUrl = "http://www.blueberryvegan.com/wp-content/uploads/2017/10/Vegan-Apple-Cinnamon-Cupcakes.jpg",
+                            InStock = true,
+                            LongDescription = "Amazing thing are these cupcakes. I’m not craving sweets at this point, but these cupcakes are ones that I wanted to keep all to myself. It’s fall in a cupcake and I’m loving them!",
+                            Name = "Sweet Apple Cinnamon",
+                            Price = 45m,
+                            ShortDescription = "They’re the indisputable champion if you’re looking for a festive and fun fall cupcake!"
+                        },
+                        new
+                        {
+                            ItemId = 36,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://greedyeats.com/wp-content/uploads/2020/09/Caramel-Apple-Cupcakes.jpg",
+                            ImageUrl = "https://greedyeats.com/wp-content/uploads/2020/09/Caramel-Apple-Cupcakes.jpg",
+                            InStock = true,
+                            LongDescription = "If one wishes for something better than Chocolate Truffle should be their next stop. Surprise that Chocolate lover in your group with this tasty batch of 4 Chocolate Truffle Cupcakes and make them smile from ear to ear",
+                            Name = "Caramel Apple Cupcakes",
+                            Price = 50m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence"
+                        },
+                        new
+                        {
+                            ItemId = 37,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://assets.epicurious.com/photos/59b1c289ca17873531543f0d/master/pass/cinnamon-apple-cupcakes-recipe-090617.jpg",
+                            ImageUrl = "https://assets.epicurious.com/photos/59b1c289ca17873531543f0d/master/pass/cinnamon-apple-cupcakes-recipe-090617.jpg",
+                            InStock = true,
+                            LongDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence.",
+                            Name = "Cinnamon Apple CupCakes",
+                            Price = 80m,
+                            ShortDescription = "If one wishes for something better than Chocolate Truffle should be their next stop. Surprise that Chocolate lover in your group with this tasty batch of 4 Chocolate Truffle Cupcakes and make them smile from ear to ear"
+                        },
+                        new
+                        {
+                            ItemId = 38,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://www.thelittleepicurean.com/wp-content/uploads/2011/08/IMG_5582-1.jpg",
+                            ImageUrl = "https://www.thelittleepicurean.com/wp-content/uploads/2011/08/IMG_5582-1.jpg",
+                            InStock = true,
+                            LongDescription = "If one wishes for something better than Chocolate Truffle should be their next stop. Surprise that Chocolate lover in your group with this tasty batch of 4 Chocolate Truffle Cupcakes and make them smile from ear to ear",
+                            Name = "Blackberry Lavender Cupcake",
+                            Price = 100m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 39,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://i0.wp.com/ahealthylifeforme.com/wp-content/uploads/2015/05/Lemon-Blackberry-Cupcakes-Recipe-4.jpg?ssl=1",
+                            ImageUrl = "https://i0.wp.com/ahealthylifeforme.com/wp-content/uploads/2015/05/Lemon-Blackberry-Cupcakes-Recipe-4.jpg?ssl=1",
+                            InStock = true,
+                            LongDescription = "If one wishes for something better than Chocolate Truffle should be their next stop. Surprise that Chocolate lover in your group with this tasty batch of 4 Chocolate Truffle Cupcakes and make them smile from ear to ear",
+                            Name = "Lemon Blackberry CupCake",
+                            Price = 120m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 40,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://www.dessertfortwo.com/wp-content/uploads/2010/06/blackberry-cupcakes-16.jpg",
+                            ImageUrl = "https://www.dessertfortwo.com/wp-content/uploads/2010/06/blackberry-cupcakes-16.jpg",
+                            InStock = true,
+                            LongDescription = "If one wishes for something better than Chocolate Truffle should be their next stop. Surprise that Chocolate lover in your group with this tasty batch of 4 Chocolate Truffle Cupcakes and make them smile from ear to ear.If one wishes for something better than Chocolate Truffle should be their next stop.Surprise that Chocolate lover in your group with this tasty batch of 4 Chocolate Truffle Cupcakes and make them smile from ear to ear. ",
+                            Name = "Blackberry Chocolate cheese",
+                            Price = 350m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 41,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://cookienameddesire.com/wp-content/uploads/2015/07/blackberry-swirl-cupcakes-lime-frosting.jpg",
+                            ImageUrl = "https://cookienameddesire.com/wp-content/uploads/2015/07/blackberry-swirl-cupcakes-lime-frosting.jpg",
+                            InStock = true,
+                            LongDescription = "If one wishes for something better than Chocolate Truffle should be their next stop. Surprise that Chocolate lover in your group with this tasty batch of 4 Chocolate Truffle Cupcakes and make them smile from ear to ear",
+                            Name = "Blackberry Lime Cupcakes",
+                            Price = 220m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 42,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtezNgG-1pJ2Kts4hGESeqCWOGwqDx6nsYuQ&usqp=CAU",
+                            ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtezNgG-1pJ2Kts4hGESeqCWOGwqDx6nsYuQ&usqp=CAU",
+                            InStock = true,
+                            LongDescription = "If you wish for the taste of pure chocolaty delicacy, this cake could be an idea deal for you. Coming with chocolate base and swirls of chocolate cream and sprinkled chocolate chips, this cake makes you chocolate dream comes true.If you wish for the taste of pure chocolaty delicacy, this cake could be an idea deal for you. Coming with chocolate base and swirls of chocolate cream and sprinkled chocolate chips, this cake makes you chocolate dream comes true.",
+                            Name = "Chocolate Stuffed Blackberry Cupcake",
+                            Price = 120m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 43,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://www.cookingclassy.com/wp-content/uploads/2017/03/coconut-cupcakes-66.jpg",
+                            ImageUrl = "https://www.cookingclassy.com/wp-content/uploads/2017/03/coconut-cupcakes-66.jpg",
+                            InStock = true,
+                            LongDescription = "This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.",
+                            Name = "Coconut ButterCream Cupcake",
+                            Price = 60m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 44,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://preppykitchen.com/wp-content/uploads/2022/04/Coconut-Cupcakes-Recipe-Card.jpg",
+                            ImageUrl = "https://preppykitchen.com/wp-content/uploads/2022/04/Coconut-Cupcakes-Recipe-Card.jpg",
+                            InStock = true,
+                            LongDescription = "This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.",
+                            Name = "Coconut SnowBalls Cupcake",
+                            Price = 50m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 45,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD3UfJTRX5aHobIJOiMBy1cM9vSw-YLsdxzA&usqp=CAU",
+                            ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD3UfJTRX5aHobIJOiMBy1cM9vSw-YLsdxzA&usqp=CAU",
+                            InStock = true,
+                            LongDescription = "If you wish for the taste of pure chocolaty delicacy, this cake could be an idea deal for you. Coming with chocolate base and swirls of chocolate cream and sprinkled chocolate chips, this cake makes you chocolate dream comes true.If you wish for the taste of pure chocolaty delicacy, this cake could be an idea deal for you. Coming with chocolate base and swirls of chocolate cream and sprinkled chocolate chips, this cake makes you chocolate dream comes true.",
+                            Name = "Chocolate Coconut Cupcake",
+                            Price = 70m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 46,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://www.lifeloveandsugar.com/wp-content/uploads/2022/06/Blueberry-Coconut-Cupcakes3.jpg",
+                            ImageUrl = "https://www.lifeloveandsugar.com/wp-content/uploads/2022/06/Blueberry-Coconut-Cupcakes3.jpg",
+                            InStock = true,
+                            LongDescription = "This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.",
+                            Name = "Blueberry Coconut Cupcake",
+                            Price = 80m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 47,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://thescranline.com/wp-content/uploads/2021/03/Coconut-Cream-Cupcakes-500x500.jpg",
+                            ImageUrl = "https://thescranline.com/wp-content/uploads/2021/03/Coconut-Cream-Cupcakes-500x500.jpg",
+                            InStock = true,
+                            LongDescription = "If you wish for the taste of pure chocolaty delicacy, this cake could be an idea deal for you. Coming with chocolate base and swirls of chocolate cream and sprinkled chocolate chips, this cake makes you chocolate dream comes true.If you wish for the taste of pure chocolaty delicacy, this cake could be an idea deal for you. Coming with chocolate base and swirls of chocolate cream and sprinkled chocolate chips, this cake makes you chocolate dream comes true.",
+                            Name = "Coconut CreamCupcakes",
+                            Price = 90m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 48,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://www.nithaskitchen.com/wp-content/uploads/2020/12/orange_cream9_L.jpg",
+                            ImageUrl = "https://www.nithaskitchen.com/wp-content/uploads/2020/12/orange_cream9_L.jpg",
+                            InStock = true,
+                            LongDescription = "This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.",
+                            Name = "Creamsicle Cupcake",
+                            Price = 40m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 49,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://www.ruchiskitchen.com/wp-content/uploads/2016/05/Eggless-orange-cupcakes-4-1.jpg",
+                            ImageUrl = "https://www.ruchiskitchen.com/wp-content/uploads/2016/05/Eggless-orange-cupcakes-4-1.jpg",
+                            InStock = true,
+                            LongDescription = "If you wish for the taste of pure chocolaty delicacy, this cake could be an idea deal for you. Coming with chocolate base and swirls of chocolate cream and sprinkled chocolate chips, this cake makes you chocolate dream comes true",
+                            Name = "Eggless Orange Cupcake",
+                            Price = 450m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 50,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://foodlets.com/wp-content/uploads/2020/06/orange-cream-cupcakes-horz.jpg",
+                            ImageUrl = "https://foodlets.com/wp-content/uploads/2020/06/orange-cream-cupcakes-horz.jpg",
+                            InStock = true,
+                            LongDescription = "This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.",
+                            Name = "Creamy Dreamy Orange",
+                            Price = 60m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 51,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://sallysbakingaddiction.com/wp-content/uploads/2016/08/fresh-squeezed-mimosa-cupcakes-2.jpg",
+                            ImageUrl = "https://sallysbakingaddiction.com/wp-content/uploads/2016/08/fresh-squeezed-mimosa-cupcakes-2.jpg",
+                            InStock = true,
+                            LongDescription = "This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.",
+                            Name = "Fresh Squeezed Cupcake",
+                            Price = 70m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 52,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 5,
+                            ImageThumbnailUrl = "https://sallysbakingaddiction.com/wp-content/uploads/2013/11/Butterscotch-Filled-Brown-Sugar-Cupcakes-by-sallysbakingaddiction.com_.jpg",
+                            ImageUrl = "https://sallysbakingaddiction.com/wp-content/uploads/2013/11/Butterscotch-Filled-Brown-Sugar-Cupcakes-by-sallysbakingaddiction.com_.jpg",
+                            InStock = true,
+                            LongDescription = "This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.This set of chocolate cupcakes, which has been topped up with a rich, luscious chocolate swirl and milk chocolate curl is sure to brighten up anyone's day with its look and taste.",
+                            Name = "Creamy Butterscotch Orange",
+                            Price = 80m,
+                            ShortDescription = "Bursting with cups of real and fresh apple for the best apple flavor! These aren't sad vanilla cupcakes with bits of baked apples. And we don't need any apple essence."
+                        },
+                        new
+                        {
+                            ItemId = 53,
+                            AllergyInformation = "",
+                            Bestsell = true,
+                            CategoryId = 6,
+                            ImageThumbnailUrl = "https://www.vegrecipesofindia.com/wp-content/uploads/2020/12/margherita-pizza-recipe-1.jpg",
+                            ImageUrl = "https://www.vegrecipesofindia.com/wp-content/uploads/2020/12/margherita-pizza-recipe-1.jpg",
+                            InStock = true,
+                            LongDescription = "Flavorful Margherita Pizza only includes a few simple and tasty ingredients, like perfectly melty mozzarella cheese and fresh basil. My easy version includes a homemade whole wheat pizza dough and scratch-made tomato sauce, but can also be made using store bought staples and your choice of toppings. Try this Italian-inspired Margherita recipe for your next pizza party or weekend movie night!",
+                            Name = "Margherita Pizza",
+                            Price = 400m,
+                            ShortDescription = "Lip smashing pizza is here!"
+                        },
+                        new
+                        {
+                            ItemId = 54,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 6,
+                            ImageThumbnailUrl = "https://i0.wp.com/www.dominosoffer.co.in/wp-content/uploads/2021/03/Dominos-peppy-paneer-pizza.jpg?fit=800%2C450&ssl=1",
+                            ImageUrl = "https://i0.wp.com/www.dominosoffer.co.in/wp-content/uploads/2021/03/Dominos-peppy-paneer-pizza.jpg?fit=800%2C450&ssl=1",
+                            InStock = true,
+                            LongDescription = "Chunky paneer with crisp capsicum and spicy red pepper – quite a mouthful! Check out this mouth-watering overload of paneer, crisp capsicum, and spicy red pepper. Regular Pizza starting @ Rs 450/ only. Grab your Delightful combination of thin crust, capsicum, and paneer. A pizza that goes ballistic on veggies! The flavorful trio of juicy paneer, crisp capsicum with spicy red paprika.",
+                            Name = "Peppy Paneer Pizza",
+                            Price = 450m,
+                            ShortDescription = "Dominos Peppy Paneer pizza – Chunky paneer with crisp capsicum and spicy red pepper – quite a mouthful!"
+                        },
+                        new
+                        {
+                            ItemId = 55,
+                            AllergyInformation = "",
+                            Bestsell = true,
+                            CategoryId = 6,
+                            ImageThumbnailUrl = "https://i.pinimg.com/736x/a4/20/2d/a4202d486dfcfedccde2838c1a11f13f.jpg",
+                            ImageUrl = "https://i.pinimg.com/736x/a4/20/2d/a4202d486dfcfedccde2838c1a11f13f.jpg",
+                            InStock = true,
+                            LongDescription = "Cheese burst bread pizza|Cheese bread pizza|Bread pizza on tawa:cheesy, easy and delicious cheese burst bread pizza. perfect instant snacks for movie night or whenever you feel lazy and crave for pizza.",
+                            Name = "Cheese Burst Pizza",
+                            Price = 300m,
+                            ShortDescription = "Cheese burst bread pizza"
+                        },
+                        new
+                        {
+                            ItemId = 56,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 6,
+                            ImageThumbnailUrl = "https://static.wixstatic.com/media/c1db4b_a6ed9358b3ec4c6ab8522b9b2c57ec64~mv2.jpg/v1/fill/w_3000,h_2250,al_c,q_85/c1db4b_a6ed9358b3ec4c6ab8522b9b2c57ec64~mv2.jpg",
+                            ImageUrl = "https://static.wixstatic.com/media/c1db4b_a6ed9358b3ec4c6ab8522b9b2c57ec64~mv2.jpg/v1/fill/w_3000,h_2250,al_c,q_85/c1db4b_a6ed9358b3ec4c6ab8522b9b2c57ec64~mv2.jpg",
+                            InStock = true,
+                            LongDescription = "I never would have thought about putting corn on a pizza, but now I can't think about anything but. The corn are juicy bursts of summer and combine with the cheese to make a truly great pie.",
+                            Name = "Corn Pizza",
+                            Price = 550m,
+                            ShortDescription = "Corn will make your stomach crave again."
+                        },
+                        new
+                        {
+                            ItemId = 57,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 6,
+                            ImageThumbnailUrl = "https://images.dominos.co.in/CreamyTomatoPPVG.jpg",
+                            ImageUrl = "https://images.dominos.co.in/CreamyTomatoPPVG.jpg",
+                            InStock = true,
+                            LongDescription = "New Combination of pasta on the top of pizza,i never would have thought about putting pasta on a pizza, but now I can't think about anything but. The pasta are juicy bursts of summer and combine with the cheese to make a truly great pie.",
+                            Name = "Cheese Pasta Pizza",
+                            Price = 380m,
+                            ShortDescription = "A pizza loaded with a spicy combination of Harissa sauce, Peri Peri chicken chunks and delicious pasta."
+                        },
+                        new
+                        {
+                            ItemId = 58,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 6,
+                            ImageThumbnailUrl = "https://5.imimg.com/data5/RI/MN/MY-17758356/imperial-recipe-pizza-non-veg-chicken-heavyweight-i10-500x500.png",
+                            ImageUrl = "https://5.imimg.com/data5/RI/MN/MY-17758356/imperial-recipe-pizza-non-veg-chicken-heavyweight-i10-500x500.png",
+                            InStock = true,
+                            LongDescription = "Pizza with full of protiens is here, Chicken Pepperoni, Sliced Chicken Meatballs, Minced Chicken Chunks BBQ Chicken and Chicken Ham with Loads of Cheese.",
+                            Name = "Chicken HeavyWeight Pizza",
+                            Price = 570m,
+                            ShortDescription = "Chicken Pepperoni, Sliced Chicken Meatballs, Minced Chicken Chunks BBQ Chicken and Chicken Ham with Loads of Cheese."
+                        },
+                        new
+                        {
+                            ItemId = 59,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 6,
+                            ImageThumbnailUrl = "https://www.goldnplump.com/sites/default/files/Texas%20BBQ%20Chicken%20Pizza_web.jpg",
+                            ImageUrl = "https://www.goldnplump.com/sites/default/files/Texas%20BBQ%20Chicken%20Pizza_web.jpg",
+                            InStock = true,
+                            LongDescription = "You’ll find pre-made pizza crusts in the refrigerated section of most supermarkets, which makes this an easy recipe for casual entertaining.Nutritional information may change when substituting your chicken product. If you choose to substitute frozen chicken for this recipe, it's best to thaw before cooking.",
+                            Name = "Texas BBQ",
+                            Price = 550m,
+                            ShortDescription = "Bell pepper, BBQ sauce, bacon, and cheddar make this pizza Texas-style. A premade crust makes preparation easy."
+                        },
+                        new
+                        {
+                            ItemId = 60,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 6,
+                            ImageThumbnailUrl = "https://www.gortsa.com/cache/large/product/18880/6SRxqpa2uoY4ch3LWnobpT69u4Z2ULuA2hhepH9s.jpeg",
+                            ImageUrl = "https://www.gortsa.com/cache/large/product/18880/6SRxqpa2uoY4ch3LWnobpT69u4Z2ULuA2hhepH9s.jpeg",
+                            InStock = true,
+                            LongDescription = "You’ll find pre-made pizza crusts in the refrigerated section of most supermarkets, which makes this an easy recipe for casual entertaining.Nutritional information may change when substituting your chicken product. If you choose to substitute frozen chicken for this recipe, it's best to thaw before cooking.",
+                            Name = "Mexican Passion",
+                            Price = 590m,
+                            ShortDescription = "Mexican Passion Pizza with cheese, baby corn, Mexican chicken, jalapeno."
+                        },
+                        new
+                        {
+                            ItemId = 61,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 6,
+                            ImageThumbnailUrl = "https://www.gortsa.com/cache/large/product/18888/ArdOIgkDuZ7pXF5MQ9kPg9K46vSQBAQhZAWct929.jpeg",
+                            ImageUrl = "https://www.gortsa.com/cache/large/product/18888/ArdOIgkDuZ7pXF5MQ9kPg9K46vSQBAQhZAWct929.jpeg",
+                            InStock = true,
+                            LongDescription = "They were in a foul mood as they said they were having to do everything to prepare for Christmas. Which we felt wasn’t fair as we had put up the Xmas trees and put the chocolates on (minus the half we had scoffed of course). No, we were just in the way and a Christmas miracle happened when they threw some money at us and told us to get out and have a pizza, now we are not so slow on the uptake sometimes and had departed the house even before the wives voice had finished echoing in the hallway.",
+                            Name = "Meateor",
+                            Price = 600m,
+                            ShortDescription = "Meateor Pizza with cheese, onion, chicken sausage, herbed chicken, Mexican chicken, BBQ chicken."
+                        },
+                        new
+                        {
+                            ItemId = 62,
+                            AllergyInformation = "",
+                            Bestsell = false,
+                            CategoryId = 6,
+                            ImageThumbnailUrl = "https://www.thepizzalads.com/wp-content/uploads/2019/01/american-hot-pizza-review-american-hot-pizza-from-pizza-express.jpg",
+                            ImageUrl = "https://www.thepizzalads.com/wp-content/uploads/2019/01/american-hot-pizza-review-american-hot-pizza-from-pizza-express.jpg",
+                            InStock = true,
+                            LongDescription = "The Pizza Lads were cold, very cold and not just from the frosty stares the missuses were casting at us. They were in a foul mood as they said they were having to do everything to prepare for Christmas. Which we felt wasn’t fair as we had put up the Xmas trees and put the chocolates on (minus the half we had scoffed of course). No, we were just in the way and a Christmas miracle happened when they threw some money at us and told us to get out and have a pizza, now we are not so slow on the uptake sometimes and had departed the house even before the wives voice had finished echoing in the hallway.",
+                            Name = "American Hottest Pizza",
+                            Price = 650m,
+                            ShortDescription = "American Hottest Pizza with lamb pepperoni, red paprika, jalapenos, mozzarella."
+                        },
+                        new
+                        {
+                            ItemId = 63,
+                            AllergyInformation = "",
+                            Bestsell = true,
                             CategoryId = 2,
                             ImageThumbnailUrl = "https://cdn.shopify.com/s/files/1/0617/4533/2395/products/BREAD-2.jpg?v=1650475476&width=600",
                             ImageUrl = "https://cdn.shopify.com/s/files/1/0617/4533/2395/products/BREAD-1.jpg?v=1650475358&width=360",
@@ -1131,7 +1691,7 @@ namespace SRRSBakery.Migrations
                         },
                         new
                         {
-                            ItemId = 24,
+                            ItemId = 64,
                             AllergyInformation = "",
                             Bestsell = true,
                             CategoryId = 2,
@@ -1145,7 +1705,7 @@ namespace SRRSBakery.Migrations
                         },
                         new
                         {
-                            ItemId = 25,
+                            ItemId = 65,
                             AllergyInformation = "",
                             Bestsell = true,
                             CategoryId = 2,
@@ -1159,7 +1719,7 @@ namespace SRRSBakery.Migrations
                         },
                         new
                         {
-                            ItemId = 26,
+                            ItemId = 66,
                             AllergyInformation = "",
                             Bestsell = true,
                             CategoryId = 2,
@@ -1173,7 +1733,7 @@ namespace SRRSBakery.Migrations
                         },
                         new
                         {
-                            ItemId = 27,
+                            ItemId = 67,
                             AllergyInformation = "",
                             Bestsell = true,
                             CategoryId = 2,
@@ -1187,7 +1747,7 @@ namespace SRRSBakery.Migrations
                         },
                         new
                         {
-                            ItemId = 28,
+                            ItemId = 68,
                             AllergyInformation = "",
                             Bestsell = true,
                             CategoryId = 2,
