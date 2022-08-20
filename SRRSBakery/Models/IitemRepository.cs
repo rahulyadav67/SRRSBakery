@@ -11,5 +11,7 @@
         IEnumerable<Item> GetPizza { get; }
         IEnumerable<Item> GetChips { get; }
         IEnumerable<Item> GetDonuts { get; }
+        IEnumerable<ImageExtra> ImageExtra { get; }
+        public IEnumerable<Item> GetCategoryById(int id);
     }
 }

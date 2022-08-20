@@ -1,0 +1,46 @@
+﻿@using SRRSBakery.ViewModels
+@model CategoryListViewModel
+<html>
+@*<head>
+<style>
+* {
+  box-sizing: border-box;
+  width:30%;
+ 
+  
+
+}
+body{
+    background-color:#f9eae1;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>*@
+<body>
+ 
+    <h1>Welcome To SRRS Bakery</h1>
+    <div class="row">   
+    @foreach (var category in Model.category)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+        <img src="@category.ImgUrl" alt=""width="200" height="200">
+        <a asp-controller="Item" asp-action="List" asp-route-id="@category.CategoryId"><p>@category.CategoryName</p></a>
+        </div></div>
+    }
+    </div> 
+
+</body>
+</html>

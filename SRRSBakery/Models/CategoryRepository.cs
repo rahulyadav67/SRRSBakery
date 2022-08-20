@@ -11,6 +11,8 @@
         
 
         public IEnumerable<Category> GetCategories => (IEnumerable<Category>)appDbContext.Categories;
+
+        
     }
 }
 

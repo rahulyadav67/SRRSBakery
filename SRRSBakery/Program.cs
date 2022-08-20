@@ -44,6 +44,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Item}/{action=ListDonuts}/{id?}");
+    pattern: "{controller=Category}/{action=ListCategory}/{id?}");
 
 app.Run();

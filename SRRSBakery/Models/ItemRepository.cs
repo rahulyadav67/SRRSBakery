@@ -1,4 +1,6 @@
-﻿namespace SRRSBakery.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace SRRSBakery.Models
 {
     public class ItemRepository : IitemRepository
 
@@ -10,7 +12,7 @@
         {
             this.appDbContext = appDbContext;
         }
-        public IEnumerable<Item>GetAll=> appDbContext.Items;
+        public IEnumerable<Item>GetAll=> appDbContext.Items.Include(n=>n.Category);
         public IEnumerable<Item> GetCakes => appDbContext.Items.Where(u => u.CategoryId == 1);
         public IEnumerable<Item> GetBreads => appDbContext.Items.Where(u => u.CategoryId == 2);
         public IEnumerable<Item> GetPancakes => appDbContext.Items.Where(u => u.CategoryId == 3);
@@ -20,8 +22,11 @@
         public IEnumerable<Item> GetDonuts => appDbContext.Items.Where(u => u.CategoryId == 7);
         public IEnumerable<Item> GetChips => appDbContext.Items.Where(u => u.CategoryId == 8);
 
-       
+        public IEnumerable<ImageExtra> ImageExtra => appDbContext.ImageExtras.Include(n=>n.item);
 
-
+        public IEnumerable<Item> GetCategoryById(int id)
+        {
+            return appDbContext.Items.Where(n => n.CategoryId == id);
+        }
     }
 }

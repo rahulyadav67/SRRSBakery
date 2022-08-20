@@ -16,16 +16,22 @@ namespace SRRSBakery.Controllers
         }
 
         
-        public IActionResult Index()
+        
+        public IActionResult List(int id)
         {
-            CategoryListViewModel categoryListViewModel = new CategoryListViewModel();
-            var categories = _CategoryRepository.GetCategories;
-            categoryListViewModel.category = categories;
-           return View(categoryListViewModel);
+            IEnumerable<Item> items;
 
-
+            if (id > 0)
+            {
+               items=_itemRepository.GetCategoryById(id);
+            }
+            else
+            {
+                items = _itemRepository.GetAll;
+            }
+            return View(items);
         }
-        public IActionResult ListChips()
+        /*public IActionResult ListChips()
         {
             ItemListViewModel itemListViewModel = new ItemListViewModel();
             var Chips = _itemRepository.GetChips;
@@ -77,7 +83,7 @@ namespace SRRSBakery.Controllers
             itemListViewModel.Items = Item;
             return View(itemListViewModel);
 
-        }
+        }*/
 
         public IActionResult ListCakes()
         {
@@ -85,6 +91,12 @@ namespace SRRSBakery.Controllers
             var Item = _itemRepository.GetCakes;
             itemListViewModel.Items = Item;
             return View(itemListViewModel);
+
+        }
+        public ViewResult Details(int id)
+        {
+            var item = _itemRepository.GetAll.FirstOrDefault(item => item.ItemId == id);
+            return View(item);
 
         }
     }
