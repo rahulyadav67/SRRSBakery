@@ -1,4 +1,4 @@
-﻿namespace SRRSBakery.Models
+﻿namespace SRRSBakery_API.Model
 {
     public interface IitemRepository 
     {
