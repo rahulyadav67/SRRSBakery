@@ -10,9 +10,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 });
 
-builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<AppDbContext>();
+builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<AppDbContext>();//for login purpose
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
@@ -35,11 +35,14 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();//for login 
 
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Item}/{action=Index}/{id?}");
+
+app.MapRazorPages();
 
 app.Run();

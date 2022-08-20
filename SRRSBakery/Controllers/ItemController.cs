@@ -36,5 +36,40 @@ namespace SRRSBakery.Controllers
             itemListViewModel.Items = donuts;
             return View(itemListViewModel);
         }
+        public IActionResult ListBread()
+        {
+            ItemListViewModel itemListViewModel = new ItemListViewModel();
+            var Bread = _itemRepository.GetBread;
+            itemListViewModel.Items = Bread;
+            return View(itemListViewModel);
+        }
+        public IActionResult ListPanCakes()
+        {
+            ItemListViewModel itemListViewModel = new ItemListViewModel();
+            var PanCakes = _itemRepository.GetPanCakes;
+            itemListViewModel.Items = PanCakes;
+            return View(itemListViewModel);
+        }
+        public IActionResult ListCookies()
+        {
+            ItemListViewModel itemListViewModel = new ItemListViewModel();
+            var Cookies = _itemRepository.GetCookies;
+            itemListViewModel.Items = Cookies;
+            return View(itemListViewModel);
+        }
+        public IActionResult ListCupCakes()
+        {
+            ItemListViewModel itemListViewModel = new ItemListViewModel();
+            var CupCakes = _itemRepository.GetCupCakes;
+            itemListViewModel.Items = CupCakes;
+            return View(itemListViewModel);
+        }
+        public IActionResult ListPizzas()
+        {
+            ItemListViewModel itemListViewModel = new ItemListViewModel();
+            var Pizzas = _itemRepository.GetPizzas;
+            itemListViewModel.Items = Pizzas;
+            return View(itemListViewModel);
+        }
     }
 }
