@@ -1,4 +1,4 @@
-﻿namespace SRRSBakery.Models
+﻿namespace SRRSBakery_API.Model
 {
     public class Cake
     {
@@ -18,7 +18,5 @@
         public CakeCategory CakeCategory { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
-
-
     }
 }
