@@ -12,8 +12,8 @@ using SRRSBakery.Models;
 namespace SRRSBakery.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220821144234_addedMigration")]
-    partial class addedMigration
+    [Migration("20220821162727_InitiallMigration")]
+    partial class InitiallMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
