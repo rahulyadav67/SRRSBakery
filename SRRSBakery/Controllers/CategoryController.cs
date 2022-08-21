@@ -15,7 +15,7 @@ namespace SRRSBakery.Controllers
         public IActionResult ListCategory()
         {
             CategoryListViewModel categoryListViewModel = new CategoryListViewModel();
-            var categories = categoryRepository.GetCategories;
+            var categories = categoryRepository.AllCategories;
             categoryListViewModel.category = categories;
             return View(categoryListViewModel);
 

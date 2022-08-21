@@ -14,7 +14,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<AppDbContext>();
 // Add services to the container.
-builder.Services.AddControllersWithViews();
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
@@ -33,17 +32,16 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-//gwfuwegwiuf
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
-app.UseAuthorization();
+app.UseAuthentication(); //for login
+app.UseAuthorization(); 
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Category}/{action=ListCategory}/{id?}");
-
+app.MapRazorPages();
 app.Run();

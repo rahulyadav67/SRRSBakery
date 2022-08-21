@@ -28,18 +28,34 @@ body{
 }
 </style>
 </head>*@
-<body>
+<body backGound style="background-color:#EECFD4">
  
     <h1>Welcome To SRRS Bakery</h1>
     <div class="row">   
     @foreach (var category in Model.category)
-    {
-        <div class="col-sm-4 col-lg-4 col-md-4">
-        <div class="thumbnail">
-        <img src="@category.ImgUrl" alt=""width="200" height="200">
-        <a asp-controller="Item" asp-action="List" asp-route-id="@category.CategoryId"><p>@category.CategoryName</p></a>
-        </div></div>
-    }
+        {
+            
+                if (!(category.CategoryId == 1))
+                {
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="@category.ImgUrl" alt=""width="200" height="200">
+                            <a asp-controller="Item" asp-action="List" asp-route-id="@category.CategoryId"><p>@category.CategoryName</p></a>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="@category.ImgUrl" alt=""width="200" height="200">
+                            <a asp-controller="Item" asp-action="ListCakes"><p>@category.CategoryName</p></a>
+                        </div>
+                    </div>
+                    
+                }
+            
+        }
     </div> 
 
 </body>

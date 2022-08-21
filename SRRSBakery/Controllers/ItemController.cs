@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using SRRSBakery.Models;
 using SRRSBakery.ViewModels;
 
@@ -6,12 +8,12 @@ namespace SRRSBakery.Controllers
 {
     public class ItemController : Controller
     {
-        private readonly ItemRepository _itemRepository;
-        private readonly CategoryRepository _CategoryRepository;
+        private readonly IitemRepository itemRepository;
+        private readonly ICategoryRepository categoryRepository;
         public ItemController(IitemRepository itemRepository, ICategoryRepository categoryRepository)
         {
-            _itemRepository = (ItemRepository)itemRepository;
-            _CategoryRepository = (CategoryRepository)categoryRepository;
+            this.itemRepository = itemRepository;
+            this.categoryRepository = categoryRepository;
 
         }
 
@@ -23,11 +25,11 @@ namespace SRRSBakery.Controllers
 
             if (id > 0)
             {
-               items=_itemRepository.GetCategoryById(id);
+               items=itemRepository.GetCategoryById(id);
             }
             else
             {
-                items = _itemRepository.GetAll;
+                items = itemRepository.GetAll;
             }
             return View(items);
         }
@@ -87,17 +89,73 @@ namespace SRRSBakery.Controllers
 
         public IActionResult ListCakes()
         {
-            ItemListViewModel itemListViewModel = new ItemListViewModel();
+            /*ItemListViewModel itemListViewModel = new ItemListViewModel();
             var Item = _itemRepository.GetCakes;
             itemListViewModel.Items = Item;
-            return View(itemListViewModel);
+            return View(itemListViewModel);*/
+            IEnumerable<Item> items;
+            items = itemRepository.GetCakes;
+            return View(items);
 
         }
         public ViewResult Details(int id)
         {
-            var item = _itemRepository.GetAll.FirstOrDefault(item => item.ItemId == id);
+            var item = itemRepository.GetAll.FirstOrDefault(item => item.ItemId == id);
             return View(item);
 
+        }
+        public ViewResult Create()
+        {
+            var categories = categoryRepository.AllCategories;
+            List<SelectListItem> categoryItems = new List<SelectListItem>();
+            foreach (var category in categories)
+            {
+                categoryItems.Add(new SelectListItem { Text = category.CategoryName, Value = category.CategoryId.ToString() });
+            }
+            ViewBag.categoryItems = categoryItems;
+            return View();
+
+        }
+        [HttpPost]
+        public IActionResult AddItem(Item item)
+        {
+            itemRepository.AddItem(item);
+            return RedirectToAction("List");
+        }
+
+        [Authorize]
+        public IActionResult Edit(int id)
+        {
+            var categories = categoryRepository.AllCategories;
+            List<SelectListItem> categoryItems = new List<SelectListItem>();
+            foreach (var category in categories)
+            {
+                categoryItems.Add(new SelectListItem { Text = category.CategoryName, Value = category.CategoryId.ToString() });
+            }
+            ViewBag.categoryItems = categoryItems;
+            var item = itemRepository.GetItemById(id);
+            return View(item);
+        }
+        [HttpPost]
+        public IActionResult UpdateItem(Item item)
+        {
+            itemRepository.UpdateItem(item);
+            return RedirectToAction("List");
+        }
+
+        [Authorize]
+        public ViewResult Remove(int id)
+        {
+            var item = itemRepository.GetItemById(id);
+            return View(item);
+        }
+
+
+        [HttpPost]
+        public IActionResult DeleteItem(Item item)
+        {
+            itemRepository.DeleteItem(item);
+            return RedirectToAction("List");
         }
     }
 

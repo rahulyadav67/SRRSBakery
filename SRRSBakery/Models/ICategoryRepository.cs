@@ -3,9 +3,11 @@
     public interface ICategoryRepository
     {
 
-        IEnumerable<Category> GetCategories { get; }
-        
-        
+        IEnumerable<Category> AllCategories { get; }
+        Category AddCategory(Category category);
+        Category UpdateCategory(Category category);
+        Category DeleteCategory(Category category);
+
     }
 }
 

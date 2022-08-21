@@ -1,10 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/*using Microsoft.AspNetCore.Mvc;
 using SRRSBakery.Models;
 
 namespace SRRSBakery.Controllers
 {
-    public class OrderController1 : Controller
-    {
         public class OrderController : Controller
         {
             private readonly IorderRepository _orderRepository;
@@ -45,5 +43,6 @@ namespace SRRSBakery.Controllers
                 return View();
             }
         }
-    }
+    
 }
+*/

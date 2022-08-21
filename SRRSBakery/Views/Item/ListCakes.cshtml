@@ -1,28 +1,39 @@
-﻿@using SRRSBakery.ViewModels
-@model ItemListViewModel
-
-<body backGound style="background-color:#EECFD4">
+﻿
+@model IEnumerable<SRRSBakery.Models.Item>
 
 
-@foreach (var donut in Model.Items)
-{
-    <div class="col-sm-4 col-lg-4 col-md-4" >
-        <div class="thumbnail">
-
-            <h3>
-               
-                
-            </h3>
-            <img style="border-radius:50%"width="40%" src="@donut.ImageUrlLarge" alt="">
-            <div class="caption">
-                <h3 class="pull-right">₹@donut.Price.ToString("n")</h3>
-
-                
-                
-                <p>@donut.Name</p>
-            </div>
+<br/>
+<br/>
+@{
+    if (@Model.Count() != 0)
+    {
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="thumbnail">
+                        <img style="border-radius:50%" src="@item.ImageUrl" alt="" width="200" height="200">
+                        <div class="caption">
+                            <h3 class="pull-right">₹@item.Price.ToString("n")</h3>
+                            <h3>
+                                <a asp-controller="item" asp-action="Details" asp-route-id="@item.ItemId">@item.Name</a>
+                            </h3>               
+                            <p>@item.ShortDescription</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            }
+            <a asp-action="Create"><h4>AddPie</h4></a>
         </div>
-    </div>
+    }
+    else
+    {
+        <h4>Soory, No items :)</h4>
+        <br/>
+        <a><h4>You Can check our other Categories => <a href="#" onclick="history.back();">More Category</a></h4></a>
+    }
 }
 
-</body>
+
+
