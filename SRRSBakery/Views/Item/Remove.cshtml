@@ -70,6 +70,7 @@
     <form asp-controller="Item" asp-action="DeleteItem" method="post">
         <input type="hidden" asp-for="ItemId" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="List">Back to List</a>
+        @*<a asp-action="List">Back to List</a>*@
+        <a asp-action="Create"><h4>Add Cake</h4>Back to List</a>
     </form>
 </div>

@@ -13,13 +13,10 @@ namespace SRRSBakery.Models
         public DbSet<Category> Categories { get; set; }
 
         public DbSet<Item> Items { get; set; }
-/*        public DbSet<ShoppingCartItem> Shoppingitemcart { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderDetails> OrdersDetails { get; set; }*/
+        public DbSet<OrderDetails> OrderDetails { get; set; }
 
-
-        /* public DbSet<Cake> Cakes { get; set; }
-         public DbSet<CakeCategory> CakeCategories { get; set; }*/
         public DbSet<ImageExtra> ImageExtras { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

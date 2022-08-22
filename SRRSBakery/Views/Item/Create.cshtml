@@ -53,10 +53,13 @@
                 </label>
             </div>
             <div class="form-group">
+                <select asp-for="CategoryId" asp-items="@ViewBag.categoryItems"></select>
+            </div>
+            @*<div class="form-group">
                 <label asp-for="CategoryId" class="control-label"></label>
                 <input asp-for="CategoryId" class="form-control" />
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -65,7 +68,8 @@
 </div>
 
 <div>
-    <a asp-action="List">Back to List</a>
+    @*<a asp-action="List">Back to List</a>*@
+    <a href="#" onclick="history.back();">Back to List</a>
 </div>
 
 @section Scripts {

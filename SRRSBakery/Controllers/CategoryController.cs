@@ -19,8 +19,11 @@ namespace SRRSBakery.Controllers
             var categories = categoryRepository.AllCategories;
             categoryListViewModel.category = categories;
             return View(categoryListViewModel);
-
-
+        }
+        public IActionResult ModifyCategory()
+        { 
+            var categories = categoryRepository.AllCategories;
+            return View(categories);
         }
         [Authorize]
         public ViewResult CreateCategory()
@@ -43,19 +46,19 @@ namespace SRRSBakery.Controllers
         public IActionResult AddCategory(Category category)
         {
             categoryRepository.AddCategory(category);
-            return RedirectToAction("CategoryList");
+            return RedirectToAction("ListCategory");
         }
         [HttpPost]
         public IActionResult UpdateCategory(Category category)
         {
             categoryRepository.UpdateCategory(category);
-            return RedirectToAction("CategoryList");
+            return RedirectToAction("ListCategory");
         }
         [HttpPost]
         public IActionResult DeleteCategory(Category category)
         {
             categoryRepository.DeleteCategory(category);
-            return RedirectToAction("CategoryList");
+            return RedirectToAction("ListCategory");
         }
     }
 }
