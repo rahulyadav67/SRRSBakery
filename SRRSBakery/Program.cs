@@ -19,8 +19,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IitemRepository, ItemRepository>();
 builder.Services.AddScoped <ICategoryRepository, CategoryRepository>();
-builder.Services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
-builder.Services.AddScoped<IorderRepository, OrderRepository>();
+/*builder.Services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+builder.Services.AddScoped<IorderRepository, OrderRepository>();*/
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSession();
 var app = builder.Build();

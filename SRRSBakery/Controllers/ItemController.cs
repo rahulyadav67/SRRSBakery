@@ -19,7 +19,7 @@ namespace SRRSBakery.Controllers
 
         
         
-        public IActionResult List(int id)
+        public IActionResult List(int id=0)
         {
             IEnumerable<Item> items;
 
@@ -33,66 +33,10 @@ namespace SRRSBakery.Controllers
             }
             return View(items);
         }
-        /*public IActionResult ListChips()
-        {
-            ItemListViewModel itemListViewModel = new ItemListViewModel();
-            var Chips = _itemRepository.GetChips;
-            itemListViewModel.Items = Chips;
-            return View(itemListViewModel);
-        }
-        public IActionResult ListDonuts()
-        {
-            ItemListViewModel itemListViewModel = new ItemListViewModel();
-            var donuts = _itemRepository.GetDonuts;
-            itemListViewModel.Items = donuts;
-            return View(itemListViewModel);
-        }
-        public ViewResult Details(int id)
-        {
-            var item = _itemRepository.GetAll.FirstOrDefault(item => item.ItemId == id);
-            return View(item);
-
-        }
-        public IActionResult ListCookies()
-        {
-            ItemListViewModel itemListViewModel = new ItemListViewModel();
-            var Item = _itemRepository.GetCookies;
-            itemListViewModel.Items = Item;
-            return View(itemListViewModel);
-
-        }
-        public IActionResult ListPizzas()
-        {
-            ItemListViewModel itemListViewModel = new ItemListViewModel();
-            var Item = _itemRepository.GetPizza;
-            itemListViewModel.Items = Item;
-            return View(itemListViewModel);
-
-        }
-        public IActionResult ListPanCakes()
-        {
-            ItemListViewModel itemListViewModel = new ItemListViewModel();
-            var Item = _itemRepository.GetPancakes;
-            itemListViewModel.Items = Item;
-            return View(itemListViewModel);
-
-        }
-
-        public IActionResult ListBread()
-        {
-            ItemListViewModel itemListViewModel = new ItemListViewModel();
-            var Item = _itemRepository.GetBreads;
-            itemListViewModel.Items = Item;
-            return View(itemListViewModel);
-
-        }*/
+        
 
         public IActionResult ListCakes()
         {
-            /*ItemListViewModel itemListViewModel = new ItemListViewModel();
-            var Item = _itemRepository.GetCakes;
-            itemListViewModel.Items = Item;
-            return View(itemListViewModel);*/
             IEnumerable<Item> items;
             items = itemRepository.GetCakes;
             return View(items);

@@ -15,13 +15,7 @@ namespace SRRSBakery.Models
         public IEnumerable<Item>GetAll=> appDbContext.Items.Include(n=>n.Category);
         public IEnumerable<Item> BestSeller => appDbContext.Items.Where(n => n.BestSeller);
         public IEnumerable<Item> GetCakes => appDbContext.Items.Where(u => ((u.CategoryId == 1)||(u.CategoryId==2) || (u.CategoryId == 3) || (u.CategoryId == 4) || (u.CategoryId == 5)));
-        /*public IEnumerable<Item> GetBreads => appDbContext.Items.Where(u => u.CategoryId == 2);
-        public IEnumerable<Item> GetPancakes => appDbContext.Items.Where(u => u.CategoryId == 3);
-        public IEnumerable<Item> GetCookies => appDbContext.Items.Where(u => u.CategoryId == 4);
-        public IEnumerable<Item> GetCupCake => appDbContext.Items.Where(u => u.CategoryId == 5);
-        public IEnumerable<Item> GetPizza => appDbContext.Items.Where(u => u.CategoryId == 6);
-        public IEnumerable<Item> GetDonuts => appDbContext.Items.Where(u => u.CategoryId == 7);
-        public IEnumerable<Item> GetChips => appDbContext.Items.Where(u => u.CategoryId == 8);*/
+
 
         public IEnumerable<ImageExtra> ImageExtra => appDbContext.ImageExtras.Include(n=>n.item);
 
