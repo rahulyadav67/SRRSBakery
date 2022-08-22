@@ -43,5 +43,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Category}/{action=ListCategory}/{id?}");
-app.MapRazorPages();
+app.MapRazorPages(); //for login
 app.Run();

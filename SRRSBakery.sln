@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SRRSBakery", "SRRSBakery\SRRSBakery.csproj", "{EC35EB80-52A2-4DC2-B268-AC83BA89BC47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRRSBakery API", "SRRSBakery API\SRRSBakery API.csproj", "{63309CCD-2D85-4035-805F-147B3912BCC5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRRSBakeryAPI", "SRRSBakeryAPI\SRRSBakeryAPI.csproj", "{4767E72D-547A-45B6-BBB4-67AC1FD9868A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{EC35EB80-52A2-4DC2-B268-AC83BA89BC47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC35EB80-52A2-4DC2-B268-AC83BA89BC47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC35EB80-52A2-4DC2-B268-AC83BA89BC47}.Release|Any CPU.Build.0 = Release|Any CPU
-		{63309CCD-2D85-4035-805F-147B3912BCC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63309CCD-2D85-4035-805F-147B3912BCC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63309CCD-2D85-4035-805F-147B3912BCC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63309CCD-2D85-4035-805F-147B3912BCC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4767E72D-547A-45B6-BBB4-67AC1FD9868A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4767E72D-547A-45B6-BBB4-67AC1FD9868A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4767E72D-547A-45B6-BBB4-67AC1FD9868A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4767E72D-547A-45B6-BBB4-67AC1FD9868A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
