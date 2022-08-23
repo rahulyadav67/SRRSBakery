@@ -14,7 +14,7 @@ namespace SRRSBakery.Models
         }
         public IEnumerable<Item>GetAll=> appDbContext.Items.Include(n=>n.Category);
         public IEnumerable<Item> BestSeller => appDbContext.Items.Where(n => n.BestSeller);
-        public IEnumerable<Item> GetCakes => appDbContext.Items.Where(u => ((u.CategoryId == 1)||(u.CategoryId==2) || (u.CategoryId == 3) || (u.CategoryId == 4) || (u.CategoryId == 5)));
+        public IEnumerable<Item> GetCakes => appDbContext.Items.Where(u => ((u.CategoryId == 1)||(u.CategoryId==2) || (u.CategoryId == 3) || (u.CategoryId == 4) || (u.CategoryId == 5))).Include(c=>c.ImageExtra);
 
 
         public IEnumerable<ImageExtra> ImageExtra => appDbContext.ImageExtras.Include(n=>n.item);

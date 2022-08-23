@@ -21,7 +21,8 @@ builder.Services.AddScoped<IitemRepository, ItemRepository>();
 builder.Services.AddScoped <ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp)); //for shopping cart
-builder.Services.AddHttpContextAccessor();              //session,user for shopping cart
+builder.Services.AddHttpContextAccessor();  //session,user for shopping cart
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddSession();
 var app = builder.Build();
 

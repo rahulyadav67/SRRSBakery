@@ -1,0 +1,49 @@
+﻿@model IEnumerable<SRRSBakery.Models.Item>
+
+<h1>Searched Items.....</h1>
+<br/>
+<br/>
+<div class="row">
+@{int i=0;}
+@foreach (var item in Model)
+{
+    i=i+1;
+    <div class="text-right col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            
+            <h3>
+                   <a>@i.<a class="text-dark" asp-action="Details" asp-route-id="@item.ItemId">@item.Name</a></a>
+                </h3>
+            <img src="@item.ImageUrl" width="300" height="250" alt="">
+            <div class="caption">
+                <h3 class="pull-right">Rs.@item.Price.ToString("n")</h3>
+                
+                <p>@item.ShortDescription</p>
+                @{ if(item.InStock)
+                    {
+                           <div class="addToCart">
+                             <p class="button">
+                              <a class="btn btn-success" 
+                          asp-controller="ShoppingCart" 
+                          asp-action="AddToShoppingCart"
+                          asp-route-ItemId="@item.ItemId">Add to cart</a>
+                             </p>
+                            </div>
+                     }
+                     else
+                     {
+                         <div class="addToCart">
+                          <p class="button">
+                          <a class="btn btn-danger" 
+                           asp-controller="Item" 
+                           asp-action="OutOfStock"
+                           asp-route-ItemId="@item.ItemId">Add to cart</a>
+                             </p>
+                            </div>
+                            
+                     }}
+            </div>
+        </div>
+    </div>
+}
+</div>

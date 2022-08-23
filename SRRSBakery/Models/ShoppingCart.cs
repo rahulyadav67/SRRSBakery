@@ -19,12 +19,21 @@ namespace SRRSBakery.Models
         //static method
         public static ShoppingCart GetCart(IServiceProvider services)
         {
-            ISession session = services.GetRequiredService<IHttpContextAccessor>()?
-                .HttpContext.Session;
+            ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
 
             var context = services.GetService<AppDbContext>();
 
             string cartId = session.GetString("CartId") ?? Guid.NewGuid().ToString();
+           
+            var userContext = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.User;
+
+            var user = userContext.Identity.Name;
+
+            session.SetString("admin", "0");
+            if (user == "admin@gmail.com")
+            {
+                session.SetString("admin", "1");
+            }
 
             session.SetString("CartId", cartId);
 

@@ -5,26 +5,95 @@
 <br/>
 <br/>
 @{
+    int i = 0;
+}
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+    @foreach (var item in Model.Where(i=>i.BestSeller))
+    {
+        i = i + 1;
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade text-center">
+          <div class="numbertext">@i / @Model.Count()</div>
+          <div class="containerss">
+          <img src="@item.ImageUrlLarge" alt="Notebook" style="width:300;">
+          <div class="top-left"><h4 class="text-danger">Best Seller</h4></div>
+            <div class="content">
+              <h3>@item.Name</h3>
+              <p>@item.ShortDescription...</p>
+            </div>
+            </div>
+          @*<img class="rounded mx-auto d-block" width="400" src="@item.ImageUrlLarge">*@
+          @*<div class="text-black"></div>*@
+        </div>
+    }
+
+ 
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+@{
     if (@Model.Count() != 0)
     {
         <div class="row">
             @foreach (var item in Model)
             {
-                <div class="col-sm-4 col-lg-4 col-md-4">
-                    <div class="thumbnail">
-                        <img style="border-radius:50%" src="@item.ImageUrl" alt="" width="200" height="200">
-                        <div class="caption">
-                            <h3 class="pull-right">₹@item.Price.ToString("n")</h3>
-                            <h3>
-                                <a asp-controller="item" asp-action="Details" asp-route-id="@item.ItemId">@item.Name</a>
-                            </h3>               
-                            <p>@item.ShortDescription</p>
+                <div class="text-right col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            
+            <h3>
+                   <a class="text-dark" asp-action="Details" asp-route-id="@item.ItemId">@item.Name</a>
+                </h3>
+            <img class="rounded" style="border-radius:50%" width="300" src="@item.ImageUrl" alt="">
+            <div class="caption">
+                <h4 class="pull-right">Rs.@item.Price.ToString("n")</h4>
+                
+                <p>@item.ShortDescription</p>
+                @{ if(item.InStock)
+                    {
+                           <div class="addToCart">
+                             <p class="button">
+                              <a class="btn btn-success" 
+                          asp-controller="ShoppingCart" 
+                          asp-action="AddToShoppingCart"
+                          asp-route-ItemId="@item.ItemId">Add to cart</a>
+                             </p>
+                            </div>
+                     }
+                     else
+                     {
+                         <div class="addToCart">
+                          <p class="button">
+                          <a class="btn btn-danger" 
+                           asp-controller="Item" 
+                           asp-action="OutOfStock"
+                           asp-route-ItemId="@item.ItemId">Add to cart</a>
+                             </p>
+                            </div>
+                            
+                     }}
+
+                            </div>
                         </div>
                     </div>
-                    
-                </div>
+                
             }
-            <a asp-action="Create"><h4>AddItem</h4></a>
+            @if (Context.Session.GetString("admin") == "1")
+            {
+                <a asp-action="Create"><h4>AddItem</h4></a>
+            }
         </div>
     }
     else

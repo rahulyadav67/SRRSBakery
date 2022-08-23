@@ -1,0 +1,36 @@
+﻿@using SRRSBakery;
+@model IEnumerable<SRRSBakery.Models.ItemMini>
+
+
+<html>
+<h1> Mini List Of All Items(Using AutoMapper)</h1>
+<br />
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Item Id.</th>
+            <th>Item Name</th>
+            <th class="text-right">Price</th>
+            <th class="text-right">Category</th>
+        </tr>
+    </thead>
+<tbody>
+@foreach (var item in Model)
+{
+    <tr>
+        <td class="text-center">@item.ItemId</td>
+        <td class="text-black"><a class="text-dark" asp-action="Detail" asp-route-id="@item.ItemId">@item.Name</a></td>
+        <td class="text-right">Rs.@item.Price.ToString("n")</td>
+        <td class="text-center">@item.Category.CategoryName</td>
+    </tr>        
+}
+</tbody>
+</table>
+<br/>
+<a class="btn btn-primary" asp-controller="Category" asp-action="ListCategory">Home</a>
+</html>
+
+
+
+
+

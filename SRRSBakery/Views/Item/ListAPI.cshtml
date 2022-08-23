@@ -1,0 +1,44 @@
+﻿@using SRRSBakery.ViewModels
+
+@model ItemListViewModel
+
+<h3>List Of All Items Using API</h3>
+<br/>
+<br/>
+@{
+    if (@Model.Items.Count() != 0)
+    {
+        <div class="row">
+            @foreach (var item in Model.Items)
+            {
+                <div class="text-right col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+            
+                <h3>
+                   @item.Name
+                </h3>
+                <img class="rounded" style="border-radius:50%" width="300" src="@item.ImageUrl" alt="">
+                <div class="caption">
+                <h4 class="pull-right">Rs.@item.Price.ToString("n")</h4>
+                
+                <p>@item.ShortDescription</p>
+               }
+
+                            </div>
+                        </div>
+                    </div>
+                
+            }
+        </div>
+    }
+    else
+    {
+        <h4>Soory, No items In API :)</h4>
+        <br/>
+        <a><h4>You Can check our other Categories => <a href="#" onclick="history.back();">More Category</a></h4></a>
+        <a asp-action="Create"><h4>AddItem</h4></a>
+    }
+}
+
+
+

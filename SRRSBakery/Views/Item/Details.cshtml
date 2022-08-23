@@ -1,31 +1,43 @@
-﻿
-@model Item
+﻿@model Item
 
-
+<h2>@Model.Name</h2>
 
 <div class="thumbnail">
-    <img alt="@Model.Name" src="@Model.ImageUrlLarge">
+    <a asp-controller="Item" asp-action="ImageLarge" asp-route-id="@Model.ItemId"><img alt="@Model.Name" src="@Model.ImageUrlLarge"></a>
     <div class="caption-full">
-        <h3 class="pull-right">₹@Model.Price</h3>
+        <h3 class="pull-right">Rs.@Model.Price</h3>
         <h3>
-            <a href="#">@Model.Name</a>
+            <a class="text-dark" href="#">@Model.Name</a>
         </h3>
         <h4>@Model.ShortDescription</h4>
         <p>@Model.LongDescription</p>
         <div class="addToCart">
             <p class="button">
-                <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart"
-                   asp-route-ItemId="@Model.ItemId">Add to cart</a>
+                @*<a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="Index">Add to cart</a>*@
+                <div class="addToCart">
+                <p class="button">
+                    <a class="btn btn-primary" 
+                       asp-controller="ShoppingCart" 
+                       asp-action="AddToShoppingCart"
+                       asp-route-ItemId="@Model.ItemId">Add to cart</a>
+                </p>
+            </div>
+
+                   @*asp-route-ItemId="@Model.ItemId"*@
             </p>
         </div>
     </div>
 </div>
 <table>
-    <tr><td><a asp-controller="Item" asp-action="Edit" asp-route-id="@Model?.ItemId">Update/Edit Item</a></td></tr>
-    <tr><td><a asp-controller="Item" asp-action="Remove" asp-route-id="@Model?.ItemId">Remove Item</a></td></tr>
+    @{
+        if (Context.Session.GetString("admin") == "1")
+        {
+                <tr><td><a asp-controller="Item" asp-action="Edit" asp-route-id="@Model?.ItemId">Update/Edit Item</a></td></tr>
+                <tr><td><a asp-controller="Item" asp-action="Remove" asp-route-id="@Model?.ItemId">Remove Item</a></td></tr>
+        }
+     }
     <br/>
     <br/>
-    @*<tr><td><a asp-controller="Item" asp-action="List">GO TO List</a></td></tr>*@
-    <tr><td><a href="#" onclick="history.back();">GO TO List</a></td></tr>
+    <tr><td><a asp-controller="Item" asp-action="List">GO TO List</a></td></tr>
     <tr><td><a asp-controller="Category" asp-action="ListCategory">Home</a></td></tr>
 </table>

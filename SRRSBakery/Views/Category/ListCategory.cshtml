@@ -1,64 +1,28 @@
 ﻿@using SRRSBakery.ViewModels
 @model CategoryListViewModel
 <html>
-@*<head>
-<style>
-* {
-  box-sizing: border-box;
-  width:30%;
- 
-  
-
-}
-body{
-    background-color:#f9eae1;
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
-</head>*@
 <body backGound style="background-color:#EECFD4">
+    
  
-    <h1>Welcome To SRRS Bakery</h1>
-    <div class="row">   
-    @foreach (var category in Model.category)
-        {
-            
-                if (!(category.CategoryId == 1))
-                {
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="@category.ImgUrl" alt=""width="200" height="200">
-                            <a asp-controller="Item" asp-action="List" asp-route-id="@category.CategoryId"><p>@category.CategoryName</p></a>
-                        </div>
-                    </div>
-                }
-                else
-                {
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="@category.ImgUrl" alt=""width="200" height="200">
-                            <a asp-controller="Item" asp-action="ListCakes"><p>@category.CategoryName</p></a>
-                        </div>
-                    </div>
-                    
-                }
-            
+   <h1 class="text-center">Welcome To SRRS Bakery</h1>
+   <br/>
+   <div class="row">
+        
+        @foreach (var category in Model.category)
+        {  
+           <div class="col-sm-4 col-lg-4 col-md-4">
+               <div class="thumbnail">
+                   <img class="rounded-circle mx-auto d-block" src="@category.ImgUrl" style="border-radius:50%" alt="" width="200" height="200">
+                   <a class="text-center" asp-controller="Item" asp-action="List" asp-route-id="@category.CategoryId"><p class="text-black">@category.CategoryName</p></a>
+               </div>
+           </div>
         }
-    </div> 
-    <a asp-controller="Category" asp-action="ModifyCategory">Modify Category</a>
-    <a asp-controller="Item" asp-action="Create">Add Item</a>
+   </div> 
+   @if (Context.Session.GetString("admin") == "1")
+    {
+        <a asp-controller="Category" asp-action="ModifyCategory">Modify Category</a><br/>
+        <a asp-controller="Item" asp-action="Create">Add Item</a>
+    }
 
 </body>
 </html>

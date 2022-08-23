@@ -7,12 +7,19 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SRRSBakery.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
+    <style>  
+    body {  
+        background-image:url("/Images/wl5.jpg") ;  
+    }  
+</style>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: #e3f2fd;">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SRRSBakery</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Category" asp-action="ListCategory">SRRSBakery</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,8 +30,22 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="ListCategory">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="ListCategory">Category</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Item" asp-action="ListAPI">List(API)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Item" asp-action="ListMini">Mini List</a>
+                        </li>
+                        @await Component.InvokeAsync("CategoryMenu")
+                        <div class="collapse navbar-collapse justify-content-end">
+                        <form class="d-flex" asp-controller="Item" asp-action="Search" method="get">
+                            <input class="form-control me-sm-2" type="text" placeholder="Search" name="searchitem">
+                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                        </div>
+                      
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item text-dark">
