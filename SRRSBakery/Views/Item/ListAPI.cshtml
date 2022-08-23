@@ -13,20 +13,16 @@
             {
                 <div class="text-right col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail">
-            
+                <img class="rounded-circle mx-auto d-block" style="border-radius:50%" width="300" src="@item.ImageUrl" alt="">
+                <div class="text-center">
                 <h3>
                    @item.Name
                 </h3>
-                <img class="rounded" style="border-radius:50%" width="300" src="@item.ImageUrl" alt="">
-                <div class="caption">
-                <h4 class="pull-right">Rs.@item.Price.ToString("n")</h4>
-                
+                <h4 class="">Rs.@item.Price.ToString("n")</h4>
                 <p>@item.ShortDescription</p>
-               }
-
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                </div>
+                </div>
                 
             }
         </div>
