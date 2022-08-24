@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SRRSBakery.Models;
 using SRRSBakery.ViewModels;
 
 namespace SRRSBakery.Controllers
 {
+    [Authorize]
     public class ShoppingCartController: Controller
     {
         private readonly IitemRepository itemRepository;

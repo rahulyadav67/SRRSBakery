@@ -14,7 +14,7 @@
                     <div class="thumbnail">
                         <img style="border-radius:50%" src="@item.ImageUrl" alt="" width="200" height="200">
                         <div class="caption">
-                            <h3 class="pull-right">₹@item.Price.ToString("n")</h3>
+                            <h3 class="pull">₹@item.Price.ToString("n")</h3>
                             <h3>
                                 <a asp-controller="item" asp-action="Details" asp-route-id="@item.ItemId">@item.Name</a>
                             </h3>               

@@ -34,6 +34,15 @@ function showSlides(n) {
 let slideIndex = 0;  //using automation slide
 showSlides();
 
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
 function showSlides() {
     let i;
     let slides = document.getElementsByClassName("mySlides");
@@ -48,5 +57,6 @@ function showSlides() {
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 4000); // Change image every 2 seconds
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+/*$('.carousel').carousel()*/

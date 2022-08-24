@@ -1,4 +1,6 @@
-﻿namespace SRRSBakery.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace SRRSBakery.Models
 {
     public class CategoryRepository : ICategoryRepository
     {
@@ -10,7 +12,7 @@
         }
 
 
-        public IEnumerable<Category> AllCategories => appDbContext.Categories;
+        public IEnumerable<Category> AllCategories => appDbContext.Categories.Include(n=>n.Items);
         public Category AddCategory(Category category)
         {
             var categories = this.appDbContext.Categories.Add(category);

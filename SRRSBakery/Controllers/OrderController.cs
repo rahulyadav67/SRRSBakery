@@ -46,6 +46,15 @@ namespace SRRSBakery.Controllers
             ViewBag.CheckoutCompleteMessage = "Your Order has been placed.";
             return View();
         }
+        public IActionResult DiscountItem(Order order)
+        {
+            double price = (double)_shoppingCart.GetShoppingCartTotal();
+            price -= price * 0.20;
+            ViewBag.NetPrice = price;
+            ViewBag.OrderIdd = _shoppingCart.ShoppingCartId;
+            return View();
+
+        }
 
     }
 }

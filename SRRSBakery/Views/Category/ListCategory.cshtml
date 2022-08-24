@@ -12,7 +12,7 @@
         {  
            <div class="col-sm-4 col-lg-4 col-md-4">
                <div class="thumbnail">
-                   <img class="rounded-circle mx-auto d-block" src="@category.ImgUrl" style="border-radius:50%" alt="" width="200" height="200">
+                   <a asp-controller="Item" asp-action="List" asp-route-id="@category.CategoryId"><img class="rounded-circle mx-auto d-block" src="@category.ImgUrl" style="border-radius:50%" alt="" width="200" height="200"></a>
                    <a class="text-center" asp-controller="Item" asp-action="List" asp-route-id="@category.CategoryId"><p class="text-black">@category.CategoryName</p></a>
                </div>
            </div>
