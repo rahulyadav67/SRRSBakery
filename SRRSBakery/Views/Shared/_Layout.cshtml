@@ -17,7 +17,7 @@
     }  
 </style>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: #e3f2fd;">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: #FF8A80;">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Category" asp-action="ListCategory">SRRSBakery</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -30,15 +30,15 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="ListCategory">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="ListCategory">Category</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Item" asp-action="ListAPI">List(API)</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Item" asp-action="ListMini">Mini List</a>
                         </li>
                         @await Component.InvokeAsync("CategoryMenu")
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ShoppingCart" asp-action="Index">Cart</a>
+                        </li>
                         <div class="collapse navbar-collapse justify-content-end">
                         <form class="d-flex" asp-controller="Item" asp-action="Search" method="get">
                             <input class="form-control me-sm-2" type="text" placeholder="Search" name="searchitem">
@@ -65,7 +65,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - SRRSBakery - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - SRRSBakery - Website <a href="https://www.globallogic.com/">Website</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

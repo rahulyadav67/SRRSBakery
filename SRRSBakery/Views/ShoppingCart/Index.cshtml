@@ -17,9 +17,7 @@
     @foreach (var line in Model.ShoppingCart.ShoppingCartItems)
     {
         <tr>
-            @*<td class="text-center">@line.Amount</td>*@
             <td class="text-center">
-	        @*<a asp-action="RemoveFromShoppingCart" asp-route-id="@line.Pie.PieId"><input type="button" value="-" class="minus" ></a><input type="number" step="1" min="1" max="" name="quantity" value="@line.Amount" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><a asp-action="AddToShoppingCart" asp-route-id="@line.Pie.PieId"><input type="button" value="+" class="plus"></a>*@
 	        <h5><a asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-itemId="@line.Item.ItemId"><img src="~/images/minus5.png" width="21" height="22" /></a>  @line.Amount  <a asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-itemId="@line.Item.ItemId"><img src="~/images/add3.png" width="25" height="25" /></a>
             </h5></td>
             <td class="text-left">@line.Item.Name</td>
@@ -29,12 +27,6 @@
             </td>
             <td class="text-center"><a asp-controller="ShoppingCart" asp-action="RemoveItemShoppingCart" asp-route-itemId="@line.Item.ItemId"><img src="~/images/delete2.png" height="28" width="27" /> 
             </a></td>
-            @*<td class="text-right"><div class=”counter”>
-                <div class=”btn”>+</div>
-                 <div class=”count”>2</div>
-                <div class=”btn”>-</div>
-             </div></td>*@
-
         </tr>
     }
     </tbody>
@@ -50,7 +42,6 @@
 </table>
 <button class="rounded"><a asp-controller="ShoppingCart" asp-action="ClearCart">Clear Cart</a></button>
 <div class="text-center">
-    @*<a class="btn btn-primary" asp-controller="Order" asp-action="VisitStore">Collect From Our Store</a>*@
     <a class="btn btn-primary" asp-controller="Order" asp-action="DiscountItem">Proceed To Delivery</a>
 </div>
 
