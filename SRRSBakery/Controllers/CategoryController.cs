@@ -8,13 +8,16 @@ namespace SRRSBakery.Controllers
     public class CategoryController : Controller
     {
         public readonly ICategoryRepository categoryRepository;
+        private readonly IHttpContextAccessor httpContextAccessor;
 
-        public CategoryController(ICategoryRepository categoryRepository)
+        public CategoryController(ICategoryRepository categoryRepository,IHttpContextAccessor httpContextAccessor)
         {
             this.categoryRepository = categoryRepository;
+            this.httpContextAccessor = httpContextAccessor;
         }
         public IActionResult ListCategory()
         {
+            var user = httpContextAccessor.HttpContext.User.Identity.Name;
             CategoryListViewModel categoryListViewModel = new CategoryListViewModel();
             var categories = categoryRepository.AllCategories;
             categoryListViewModel.category = categories;

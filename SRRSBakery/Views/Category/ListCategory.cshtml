@@ -18,7 +18,7 @@
            </div>
         }
    </div> 
-   @if (Context.Session.GetString("admin") == "1")
+   @if (Context.User.Identity.Name=="admin@gmail.com")
     {
         <a asp-controller="Category" asp-action="ModifyCategory">Modify Category</a><br/>
         <a asp-controller="Item" asp-action="Create">Add Item</a>

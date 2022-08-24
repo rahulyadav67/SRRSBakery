@@ -21,7 +21,7 @@
     
                  <tr>
                      <th scope="row">@i</th>
-                     <td><a asp-controller="Pie" asp-action="DetailsCategory" asp-route-id="@category.CategoryId"><h5> @category.CategoryName </h5></a></td>
+                     <td><a asp-controller="Category" asp-action="ListCategory" asp-route-id="@category.CategoryId"><h5> @category.CategoryName </h5></a></td>
                      <td>@category.Description</td>
                      <td>@category.CategoryId</td>
                      <td><a asp-controller="Category" asp-action="EditCategory" asp-route-id="@category?.CategoryId">Update</a></td>

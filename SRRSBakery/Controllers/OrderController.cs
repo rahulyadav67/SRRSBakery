@@ -53,7 +53,6 @@ namespace SRRSBakery.Controllers
             ViewBag.NetPrice = price;
             ViewBag.OrderIdd = _shoppingCart.ShoppingCartId;
             return View();
-
         }
 
     }

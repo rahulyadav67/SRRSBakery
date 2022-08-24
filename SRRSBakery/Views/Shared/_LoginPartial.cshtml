@@ -8,7 +8,7 @@
 {
    <li class="nav-item">
         <a id="manage" class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
-            @if(Context.Session.GetString("admin")=="1")
+            @if(Context.User.Identity.Name=="admin@gmail.com")
             {
                     <span>Admin </span>
             }
@@ -32,7 +32,6 @@ else
     </li>
     <li class="nav-item">
         <a id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-fw fa-user"></i> Login</a>
-        @*<a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>*@
     </li>
 }
 </ul>

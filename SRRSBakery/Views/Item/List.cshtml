@@ -57,7 +57,7 @@
                 <a asp-action="Details" asp-route-id="@item.ItemId"><img class="rounded" style="border-radius:50%" width="300" src="@item.ImageUrl" alt=""></a>
                  <div class="caption">
                     <h4 class="pull">Rs.@item.Price.ToString("n")</h4>
-                     <p>@item.ShortDescription</p>
+                     <h5>@item.ShortDescription</h5>
                 @{ if(item.InStock)
                     {
                            <div class="addToCart">
@@ -87,7 +87,7 @@
                     </div>
                 
             }
-            @if (Context.Session.GetString("admin") == "1")
+            @if (Context.User.Identity.Name=="admin@gmail.com")
             {
                 <a asp-action="Create"><h4>AddItem</h4></a>
             }
