@@ -5,7 +5,7 @@
             Category
           </a>
           
-          <ul class="dropdown-menu " style="background-color: #A7FFEB;" aria-labelledby="navbarDropdownMenuLink">
+          <ul class="dropdown-menu " style="background-color: #ffd07b;" aria-labelledby="navbarDropdownMenuLink">
           @foreach (var category in Model)
            {
              <li><a class="dropdown-item text-black" asp-controller="Item" asp-action="List" asp-route-id = "@category.CategoryId" >@category.CategoryName</a></li>
