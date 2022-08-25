@@ -3,11 +3,7 @@
     <Center>
 <h2>@Model.Name</h2>
 <body>
-<style>  
-    body {  
-        background-image:url("/Images/wl5.jpg") ;  
-    }  
-    </style>
+
 <div class="thumbnail">
     <a asp-controller="Item" asp-action="ImageLarge" asp-route-id="@Model.ItemId"><img alt="@Model.Name" src="@Model.ImageUrlLarge"></a>
     <div class="">
